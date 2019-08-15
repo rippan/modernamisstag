@@ -193,7 +193,7 @@ a {
 		
 
 	<div id="page-calendar" class="page border hide">
-		<div id="fullcalendar" style="min-height:1000px;"></div>
+		<div id="fullcalendar"></div>
 	</div>
 
 	<div id="page-dkp" class="page border hide">
@@ -224,6 +224,7 @@ a {
 	var calendarEl = document.getElementById('fullcalendar');
 	var calendar = new FullCalendar.Calendar(calendarEl, {
 	plugins: [ 'dayGrid'],
+	height: 1200,
 	locale: 'sv',
 	firstDay:1,
 	weekNumbers:true,
