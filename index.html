@@ -86,6 +86,7 @@ a {
 	margin-top:17px;
 	margin-right: 15px;
 	cursor:pointer;
+	text-decoration: none;
 }
 
 .img-title {
@@ -122,11 +123,11 @@ a {
 	</div>
 
 	<div class="border c" style="width:100%;height:50px;margin-top:20px;text-align: center;">
-		<span class="page-link u" id="page-link-info">Information</span>
-		<span class="page-link" id="page-link-ss">Skärmdumpar</span>
-		<span class="page-link" id="page-link-calendar">Kalender</span>
-		<span class="page-link" id="page-link-dkp">DKP</span>
-		<span class="page-link" id="page-link-contact">Kontakt</span>
+		<a href="#info" class="page-link" id="page-link-info" style="text-decoration:underline;">Information</a>
+		<a href="#calendar" class="page-link" id="page-link-calendar">Kalender</a>
+		<a href="#ss" class="page-link" id="page-link-ss">Skärmdumpar</a>
+		<a href="#dkp" class="page-link" id="page-link-dkp">DKP</a>
+		<a href="#contact" class="page-link" id="page-link-contact">Kontakt</a>
 	</div>
 	
 	<div id="page-info" class="page border">
@@ -249,15 +250,15 @@ a {
 	$("#page-link-info").click(function() {
 		$(".page").hide();
 		$("#page-info").fadeIn();
-		$(".page-link").removeClass("u");
-		$(this).addClass("u");
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
 	});
 
 	$("#page-link-ss").click(function() {
 		$(".page").hide();
 		$("#page-ss").fadeIn();
-		$(".page-link").removeClass("u");
-		$(this).addClass("u");
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
 	});
 
 	$("#page-link-calendar").click(function() {
@@ -265,23 +266,23 @@ a {
 		$("#page-calendar").fadeIn(function() {
 			calendar.render();
 		});
-		$(".page-link").removeClass("u");
-		$(this).addClass("u");
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
 		
 	});
 
 	$("#page-link-dkp").click(function() {
 		$(".page").hide();
 		$("#page-dkp").fadeIn();
-		$(".page-link").removeClass("u");
-		$(this).addClass("u");
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
 	});
 
 	$("#page-link-contact").click(function() {
 		$(".page").hide();
 		$("#page-contact").fadeIn();
-		$(".page-link").removeClass("u");
-		$(this).addClass("u");
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
 	});
 
 	resizeBrowser();
@@ -301,6 +302,23 @@ a {
 			$("#menu").css("float","right");
 			$(".page").css("margin-top","0px");
 		}
+	}
+
+	var anchor = window.location.hash.substr(1);
+	if(anchor == "info") {
+		$("#page-link-info").click();
+	}
+	else if(anchor == "calendar") {
+		$("#page-link-calendar").click();
+	}
+	else if(anchor == "ss") {
+		$("#page-link-ss").click();
+	}
+	else if(anchor == "dkp") {
+		$("#page-link-ss").click();
+	}
+	else if(anchor == "contact") {
+		$("#page-link-ss").click();
 	}
 </script>
 </body>
