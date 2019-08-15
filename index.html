@@ -210,7 +210,32 @@ a {
 </div>
 
 <script>
-	var calendar;
+
+	var calendarEl = document.getElementById('calendar');
+	var calendar = new FullCalendar.Calendar(calendarEl, {
+	plugins: [ 'dayGrid','list' ],
+	locale: 'sv',
+	firstDay:1,
+	weekNumbers:true,
+	events: [{
+		id: '1',
+		title: 'LAUNCH DAY',
+		start: '2019-08-27'
+	},
+	{
+		id: '2',
+		title: 'RFC',
+		start: '2019-08-28'
+	},
+	{
+		id: '3',
+		title: 'WC',
+		start: '2019-08-29'
+	}
+	]
+	});
+
+	calendar.render();
 
 	$("#page-link-info").click(function() {
 		$(".page").hide();
@@ -230,33 +255,9 @@ a {
 		$(".page").hide();
 		$("#page-calendar").fadeIn(function() {
 			if(!calendar) {
-				var calendarEl = document.getElementById('calendar');
-
-				calendar = new FullCalendar.Calendar(calendarEl, {
-				plugins: [ 'dayGrid','list' ],
-				locale: 'sv',
-				firstDay:1,
-				weekNumbers:true,
-				events: [{
-					id: '1',
-					title: 'LAUNCH DAY',
-					start: '2019-08-27'
-				},
-				{
-					id: '2',
-					title: 'RFC',
-					start: '2019-08-28'
-				},
-				{
-					id: '3',
-					title: 'WC',
-					start: '2019-08-29'
-				}
-				]
-				});
-
-				calendar.render();
+				
 			}
+			calendar.render();
 		});
 		$(".page-link").removeClass("u");
 		$(this).addClass("u");
