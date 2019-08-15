@@ -123,14 +123,35 @@ a {
 	</div>
 
 	<div class="border c" style="width:100%;height:50px;margin-top:20px;text-align: center;">
-		<a href="#info" class="page-link" id="page-link-info" style="text-decoration:underline;">Information</a>
+		<a href="#news" class="page-link" id="page-link-news" style="text-decoration:underline;">Nyheter</a>
+		<a href="#info" class="page-link" id="page-link-info">Information</a>
 		<a href="#calendar" class="page-link" id="page-link-calendar">Kalender</a>
 		<a href="#ss" class="page-link" id="page-link-ss">Skärmdumpar</a>
 		<a href="#dkp" class="page-link" id="page-link-dkp">DKP</a>
 		<a href="#contact" class="page-link" id="page-link-contact">Kontakt</a>
 	</div>
 	
-	<div id="page-info" class="page border">
+	<div id="page-news" class="page border hide">
+
+		<div class="p">Moderna Misstag är en <u>svensk semi-hardcore Classic WoW Horde-guild</u> som startade sin resa under Vanilla WoW. Guilden drivs i mångt och mycket av samma spelare nu som då, och har samlat på sig mycket erfarenhet under åren. En av guildens grundpelare är att erbjuda en rolig och avslappnad raid-miljö som fungerar med vuxenlivet. Guildens mål är att raida två till tre dagar i veckan under kontrollerade och fokuserade former för att få lämplig progress.</div>
+		<div class="p">Shazzrah PvP är den server vi kommer spela på om någon har missat. Registrera era namn på servern sen börjar vi räkna timmar till launch!</div>
+
+		<div style="text-align: center;font-size:22px;">
+			Nedräkning till WoW Classic<div id="countdown"></div>
+		</div>
+		<br>
+		<div class="c" style="position:relative;border:0px solid red;">
+			<div class="img-title">2019-08-11 RFC clear på stresstest</div>
+			<img src="img/ss/1.jpg" style="border-radius:5px;max-width: 100%;max-height: 100%;" />
+		</div>
+
+		<div class="c p">
+			<a href="https://discord.gg/4tfTzUF"><img src="img/Discord-Logo-Color.png" /></a><br />
+			<a href="https://discord.gg/4tfTzUF">Läs mer och chatta med oss på Discord!</a>
+		</div>
+	</div>
+
+	<div id="page-info" class="page border hide">
 		<div class="b">Guild Information</div>
 		<div class="p">Moderna Misstag är en <u>svensk semi-hardcore Classic WoW Horde-guild</u> som startade sin resa under Vanilla WoW. Guilden drivs i mångt och mycket av samma spelare nu som då, och har samlat på sig mycket erfarenhet under åren. En av guildens grundpelare är att erbjuda en rolig och avslappnad raid-miljö som fungerar med vuxenlivet. Guildens mål är att raida två till tre dagar i veckan under kontrollerade och fokuserade former för att få lämplig progress.</div>
 
@@ -294,6 +315,13 @@ a {
 
 	calendar.render();
 
+	$("#page-link-news").click(function() {
+		$(".page").hide();
+		$("#page-news").fadeIn();
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
+	});
+
 	$("#page-link-info").click(function() {
 		$(".page").hide();
 		$("#page-info").fadeIn();
@@ -352,7 +380,10 @@ a {
 	}
 
 	var anchor = window.location.hash.substr(1);
-	if(anchor == "info") {
+	if(anchor == "news") {
+		$("#page-link-news").click();
+	}
+	else if(anchor == "info") {
 		$("#page-link-info").click();
 	}
 	else if(anchor == "calendar") {
@@ -367,6 +398,55 @@ a {
 	else if(anchor == "contact") {
 		$("#page-link-contact").click();
 	}
+	else {
+		$("#page-link-news").click();
+	}
+
+
+
+	//Countdown
+	// Set the date we're counting down to
+	var countDownDate = new Date("Aug 27, 2019 00:00").getTime();
+
+	// Get today's date and time
+	var now = new Date().getTime();
+			
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
+		
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		
+	// Output the result in an element with id="demo"
+	document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+		// Get today's date and time
+		var now = new Date().getTime();
+			
+		// Find the distance between now and the count down date
+		var distance = countDownDate - now;
+			
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			
+		// Output the result in an element with id="demo"
+		document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+			
+		// If the count down is over, write some text 
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("countdown").innerHTML = "WAITING FOR LOGIN SERVER!";
+		}
+	}, 1000);
 </script>
 </body>
 </html>
