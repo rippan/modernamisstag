@@ -24,7 +24,7 @@ html {
 
 body {
 	background-color:#222;
-	background-image: url("img/bg2.png");
+	background-image: url("img/bg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -216,23 +216,28 @@ a {
 	var calendarEl = document.getElementById('calendar');
 	var calendar = new FullCalendar.Calendar(calendarEl, {
 	plugins: [ 'dayGrid','list' ],
+	header: {
+        left: 'prevYear,prev,next,nextYear today',
+        center: 'title',
+        right: 'dayGridMonth,dayGridWeek,dayGridDay'
+	},
 	locale: 'sv',
 	firstDay:1,
 	weekNumbers:true,
 	events: [{
 			id: '1',
 			title: 'LAUNCH',
-			start: new Date(2019,7,27,00,01,) //'2019-08-27'
+			start: '2019-08-27'
 		},
 		{
 			id: '2',
 			title: 'RFC',
-			start: new Date(2019,7,28,19,30) //'2019-08-28'
+			start: '2019-08-28'
 		},
 		{
 			id: '3',
 			title: 'WC',
-			start: new Date(2019,7,29,19,30) //'2019-08-29'
+			start: '2019-08-29'
 		}
 	]
 	});
@@ -255,14 +260,14 @@ a {
 
 	$("#page-link-calendar").click(function() {
 		$(".page").hide();
+		$(".container").height(1500);
 		$("#page-calendar").fadeIn(function() {
-			if(!calendar) {
-				
-			}
+			$(".container").height(1500);
 			calendar.render();
 		});
 		$(".page-link").removeClass("u");
 		$(this).addClass("u");
+		
 	});
 
 	$("#page-link-dkp").click(function() {
