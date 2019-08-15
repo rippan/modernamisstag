@@ -194,6 +194,18 @@ a {
 
 	<div id="page-calendar" class="page border hide">
 		<div id="fullcalendar"></div>
+		<div id="event" style="margin-top: 20px;border: 1px solid #999999;background-color: #9b0000;padding: 10px;display:none;">
+			
+			<table border=0>
+				<tbody>
+				<tr><td colspan="2" id="event-title" class="b"></div></td></tr>
+				<tr><td>Startar</td><td id="event-start"></div></td></tr>
+				<tr><td>Slutar</td><td id="event-end"></div></td></tr>
+				<tr><td colspan="2" id="event-content"></div></td></tr>
+				</tbody>
+			</table>
+			<div id="event-content" style="margin-top:10px;"></div>
+		</div>
 	</div>
 
 	<div id="page-dkp" class="page border hide">
@@ -220,7 +232,6 @@ a {
 </div>
 
 <script>
-
 	var calendarEl = document.getElementById('fullcalendar');
 	var calendar = new FullCalendar.Calendar(calendarEl, {
 	plugins: [ 'dayGrid'],
@@ -231,19 +242,54 @@ a {
 	events: [{
 			id: '1',
 			title: 'LAUNCH',
-			start: '2019-08-27 00:01'
+			start: '2019-08-27 00:00',
+			extendedProps: ["World of Warcraft Classic börjar!"]
 		},
 		{
 			id: '2',
 			title: 'RFC',
-			start: '2019-08-28 19:30'
+			start: '2019-08-28 19:30',
+			end: '2019-08-28 22:30',
+			extendedProps: ["Ragefire Chasm 5 man instance, level 12-15 instance"]
 		},
 		{
 			id: '3',
 			title: 'WC',
-			start: '2019-08-29 19:30'
+			start: '2019-08-29 19:30',
+			end: '2019-08-29 22:30',
+			extendedProps: ["Wailing Caverns 5 man instance, level 15-28"]
 		}
-	]
+	],
+	eventClick: function(e) {
+		console.log(e);
+		$("#event-title").html(e.event.title);
+
+		var date = e.event.start;
+		var year = date.getFullYear();
+		var month = ('0' + (date.getMonth()+1)).slice(-2);
+		var day = ('0' + (date.getDate())).slice(-2);
+		var hours = ('0' + (date.getHours())).slice(-2);
+		var minutes = ('0' + (date.getMinutes())).slice(-2);
+		
+		$("#event-start").html(year + "-" + month + "-" + day + " " + hours + ":" + minutes);
+
+
+		if(e.event.end) {
+			var date = e.event.end;
+			var year = date.getFullYear();
+			var month = ('0' + (date.getMonth()+1)).slice(-2);
+			var day = ('0' + (date.getDate())).slice(-2);
+			var hours = ('0' + (date.getHours())).slice(-2);
+			var minutes = ('0' + (date.getMinutes())).slice(-2);
+			
+			$("#event-end").html(year + "-" + month + "-" + day + " " + hours + ":" + minutes);
+		}
+		else {
+			$("#event-end").html("-");
+		}
+		$("#event-content").html(e.event.extendedProps[0]);
+		$("#event").fadeIn();
+	}
 	});
 
 	calendar.render();
