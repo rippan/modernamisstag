@@ -1,13 +1,282 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Moderna Misstag (WoW Classic)</title>
-		<meta charset="UTF-8">
-		<script src="jquery.js"></script>
-	</head>
-	<body>
-		<a hef="https://discord.gg/4tfTzUF">https://discord.gg/4tfTzUF</a>
-		<script>
-		</script>
-	</body>
+<head>
+	<title>Moderna Misstag (WoW Classic)</title>
+	<meta charset="UTF-8">
+	<script src="jquery.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='js/fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='js/fullcalendar/daygrid/main.css' rel='stylesheet' />
+	
+    <script src='js/fullcalendar/core/main.js'></script>
+	<script src='js/fullcalendar/daygrid/main.js'></script>
+	<script src='js/fullcalendar/list/main.js'></script>
+	<script src='js/fullcalendar/core/locales/sv.js'></script>
+	
+</head>
+<style>
+body {
+	background-color:#222;
+	color:white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	color:white;
+}
+
+.container {
+	width:90%;
+	margin:0px auto;
+	max-width:1200px;
+}
+
+.logo {
+	font-size:42px;
+}
+
+.b {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.i {
+	font-style:italic;
+	margin-bottom: 5px;
+}
+
+.u {
+	text-decoration:underline;
+}
+
+.p {
+	margin-bottom:20px;
+}
+
+.c {
+	text-align:center;
+}
+
+.hide {
+	display:none;
+}
+
+.page-link {
+	float:left;
+	font-size:22px;
+	margin-top:17px;
+	margin-right: 15px;
+	cursor:pointer;
+}
+
+.img-title {
+	position:absolute;
+	border:0px solid black;
+	color:white;
+	height:25px;
+	padding-top:5px;
+	background-color:black;
+	width:100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	opacity: 0.5;
+}
+
+.img-title:hover {
+	opacity: 0.8;
+}
+
+.border {
+	border: 0px solid black;
+}
+
+</style>
+<body>
+<div class="container" style="margin-top:20px;height:80px;">
+	<div id="logo" class="border" style="float:left;height:60px;width:430px;">
+		<div class="b p logo">&lt;Moderna Misstag&gt;</div>
+	</div>
+	<div id="menu" class="border" style="float:right;width:535px;height:60px;">
+		<div class="page-link u" id="page-link-info">Information</div>
+		<div class="page-link" id="page-link-ss">Skärmdumpar</div>
+		<div class="page-link" id="page-link-calendar">Kalender</div>
+		<div class="page-link" id="page-link-dkp">DKP</div>
+		<div class="page-link" id="page-link-contact">Kontakt</div>
+	</div>
+</div>
+
+<div id="page-info" class="container page border">
+<div class="b">Guild Information</div>
+<div class="p">Moderna Misstag är en svensk semi-hardcore Classic WoW-guild som startade sin resa under Vanilla WoW. Guilden drivs i mångt och mycket av samma spelare nu som då, och har samlat på sig mycket erfarenhet under åren. En av guildens grundpelare är att erbjuda en rolig och avslappnad raid-miljö som fungerar med vuxenlivet. Guildens mål är att raida två till tre dagar i veckan under kontrollerade och fokuserade former för att få lämplig progress.</div>
+
+<div class="b p">Förväntningar</div>
+
+<div class="i">Guild member</div>
+<div class="p">Moderna Misstag förväntar sig att du som guild member har grundläggande kunskap om din klass, är trevlig och kan tillägna två kvällar tillsammans med guilden för raids. Det viktigaste för oss är att du följer ordningsregler och funkar bra ihop med resten av guilden. En förutsättning för att lyckas är enligt oss att vi hjälper varandra. Vi vet, och har förståelse för att det kommer ta tid att bli level 60 och klara förberedelserna för raid.</div>
+
+<div class="i">Officer</div>
+<div class="p">Moderna Misstag förväntar sig att du som Officer har mer ingående kunskap om respektive klass förmåga. Där ingår vilken spec som är den för tillfället rekommenderade, vilket gear som är BiS, vilka addons som krävs samt övriga detaljer som kan vara relevanta. Ingen kan naturligtvis veta allt men man bör kunna hänvisa till var relevant information kan hämtas. Vidare så har man ansvar över att guildens ordningsregler efterföljs för allas vår trevnad. Under raidförberedelser är det också viktigt att man är med och hjälper till och underlättar för övriga officers. Denna roll kräver hög attendance. Är du intresserad av att bli officer så kontakta någon av våra guild leaders.</div>
+
+<div class="b">Lootregler</div>
+<div class="p">Misstag kommer att använda sig av ett DKP-system. Exakt hur det kommer att fungera med decay/closed/open bid är inte helt fastställt ännu. Mer information kommer!</div>
+
+<div class="i">Loot prio</div>
+<div class="p">Vår loot prio har två olika delar. Classic släpps med 1.12-patchen, och därav 1.12-talents och 16 debuff-slots. Detta betyder att DPSen kommer få en rejäl hjälp på traven. Vår loot prio kommer därav att se ut Tank, Healer, DPS. Specifika items och set-delar kommer t ex att gå först till spelare som har avsikt att tanka (Prot och Fury Warriors) Vi kommer att geara upp Prot först och sedan gå vidare för Fury då vi kommer behöva högt antal gearade tanks för progression efter BWL. DPS kommer generellt vara hög då 16 debuffslots och 1.12-talents är på launch. Vi kommer att försöka vara så rättvisa det går i distributionen, men för guildens bästa är detta vägen att gå.</div>
+
+<div class="b">Legendarys/Professions</div>
+<div class="p">Eventuella legendarys, såsom Thunderfury, Hand of Ragnaros etc kommer att vara reserverade för Officer/Guild Leader med lämplig roll. T ex kommer första Thunderfury gå till en av våra main tanks. Detta är givetvis det bästa för guilden då det förbättrar möjlighet till progress, tar bort orosmoment att folk eventuellt lämnar när man fått sin Benediction samt tar bort allt drama som kan finnas gällande dessa items.</div>
+<div class="p">Detta gäller även professions. Guild Leaders och Officers kommer tillsammans att täcka alla professions som är nödvändigt för progress. Recept och material som droppas i raid kommer att vara reserverade till respektive Officer/Guild Leader med korresponderande profession. Som ett exempel har vi Nightfall Axe, som kräver exalted med Thorium Brotherhood. Yxan är ovärderlig för raidens DPS. För den krävs bland annat Fiery Core och Lava Core. Dessa reserveras därav av den Officer/Guild Leader som kan eller kommer att kunna crafta den. Överblivet gear disenchantas av Guild Leader/Officer som har Enchanting och recept reserveras för denna etc. Även här är det för guildens bästa. På detta sätt garanterar vi att enchants och viktiga recept finns tillgängliga i guilden och kan craftas till våra medlemmar. Givetvis kommer enchants och gear att tillhandahållas i den mån det är möjligt och nödvändigt.</div>
+
+<div class="b p">Ordningsregler</div>
+
+<div class="i">Generellt</div>
+<div class="p">Vi har en vänlig ton mot våra medspelare. Det skall icke förekomma trakasserier i någon form eller i något sammanhang. Attityden gentemot andra guild members är det vi värdesätter mest av allt. Vi sköter eventuella diskussioner privat, dvs håller guild- och discord-chat fri från detta. Vid större problem kontaktar man officer eller guild leader som därefter är behjälplig. Om man upplever något i guilden som ett problem eller har övriga synpunkter så är det viktigt att man tar upp det med någon av våra officers så att problemen kan lösas på ett snabbt och korrekt sätt istället för att problemen ska ligga om pyra så att de blir större än vad de behöver vara. </div>
+
+<div class="i">Raid</div>
+<div class="p">Till raid kommer man på utsatt tid, är förberedd och har sina attunements klara. Vårt mål är att ha en avslappnad raid-miljö som fokuserar på progress. Självklart ska vi prata och skoja i discord, men fokus under raids är det absolut viktigaste.</div>
+<div class="p">I Classic kommer möjlighet att dela loot efter att den har delats av Master Looter likt BfA. Diskussioner kring detta är inget vi ska ha i guild chat, raid chat eller discord. Vid tillfällen där fel har begåtts kan detta bli aktuellt, då i skriftlig form privat med involverade personer. En generell regel är att ingen loot delas mellan medlemmar utan diskussion med Raid Leader, Officer eller Guild Leader. Detta för att undvika att medlemmar i guilden ska skicka loot mellan varandra och på så vis skapa osämja. Åsikter på hur och var loot delas ut tas skriftligen med Master Looter. Fel kan förekomma, åtgärder och förbättringar i tankesättet kring lootdistribuering är alltid välkommet</div>
+
+<div class="p">Raid leader är Ancile. När vi är under progress kommer vi att använda taktiker som är utformade av guildens ledning, och dem följer vi under varje encounter. Man är tyst under genomgång och visar respekt för andra medlemmar som avsatt sin tid för att komma till raid. Har man synpunkter på taktik som används skriver man privat till Raid Leader, Officer eller Guild Leader som sedan tar ställning och gör justeringar om det är nödvändigt. Detta för att undvika att det blir kackligt på discord, som det finns en viss tendens att bli med 40 personer i samma rum.</div>
+
+<div class="b">Recruitment</div>
+
+<div class="p">I dagsläget söker vi medlemmar av alla klasser. Vi söker även Ranged och Melee-officer. Är man intresserad av detta eller har vänner och bekanta som vill joina hör man av sig till Norrlands Guld, Kanaki, Ageis eller Ancile.</div>
+
+<div class="b">Kontakt</div>
+
+<div class="p">Har ni frågor eller funderingar angående guilden eller upplägget i övrigt så är ni välkomna att ta upp dem med någon av våra officers eller guild leaders, antingen via DM på Discord: 
+	<a class="i" href="https://discord.gg/4tfTzUF">Glamunn#0575</a>, 
+	<a class="i" href="https://discord.gg/4tfTzUF">jaksdsf#7934</a>, 
+	<a class="i" href="https://discord.gg/4tfTzUF">baguette#0689</a>
+	eller via Battle.net: Glamunn#2241, Salty#2805, Toppfrallan#2201</div>
+<div class="c p">
+	<a href="https://discord.gg/4tfTzUF"><img src="img/Discord-Logo-Color.png" /></a><br />
+	<a href="https://discord.gg/4tfTzUF">Läs mer och chatta med oss på Discord!</a>
+</div>
+
+</div>
+
+<div id="page-ss" class="container page border hide">
+	<div class="c" style="position:relative;border:0px solid red;">
+		<div class="img-title">2019-08-11 RFC clear på stresstest</div>
+		<img src="img/ss/1.jpg" style="border-radius:5px;max-width: 100%;max-height: 100%;" />
+	</div>
+</div>
+	
+
+<div id="page-calendar" class="container page border hide">
+	<div id='calendar'></div>
+</div>
+
+<div id="page-dkp" class="container page border hide">
+	<div class="b">DKP kommer snart</div>
+</div>
+
+<div id="page-contact" class="container page border hide">
+	<div class="p">Har ni frågor eller funderingar angående guilden eller upplägget i övrigt så är ni välkomna att ta upp dem med någon av våra officers eller guild leaders, antingen via DM på Discord: 
+		<a class="i" href="https://discord.gg/4tfTzUF">Glamunn#0575</a>, 
+		<a class="i" href="https://discord.gg/4tfTzUF">jaksdsf#7934</a>, 
+		<a class="i" href="https://discord.gg/4tfTzUF">baguette#0689</a>
+		eller via Battle.net: Glamunn#2241, Salty#2805, Toppfrallan#2201
+	</div>
+	<div class="c p">
+		<a href="https://discord.gg/4tfTzUF"><img src="img/Discord-Logo-Color.png" /></a><br />
+		<a href="https://discord.gg/4tfTzUF">Läs mer och chatta med oss på Discord!</a>
+	</div>
+</div>
+
+
+</div>
+<script>
+	var calendar;
+
+	$("#page-link-info").click(function() {
+		$(".page").hide();
+		$("#page-info").fadeIn();
+		$(".page-link").removeClass("u");
+		$(this).addClass("u");
+	});
+
+	$("#page-link-ss").click(function() {
+		$(".page").hide();
+		$("#page-ss").fadeIn();
+		$(".page-link").removeClass("u");
+		$(this).addClass("u");
+	});
+
+	$("#page-link-calendar").click(function() {
+		$(".page").hide();
+		$("#page-calendar").fadeIn(function() {
+			if(!calendar) {
+				var calendarEl = document.getElementById('calendar');
+
+				calendar = new FullCalendar.Calendar(calendarEl, {
+				plugins: [ 'dayGrid','list' ],
+				locale: 'sv',
+				firstDay:1,
+				weekNumbers:true,
+				events: [{
+					id: '1',
+					title: 'LAUNCH DAY',
+					start: '2019-08-27'
+				},
+				{
+					id: '2',
+					title: 'RFC',
+					start: '2019-08-28'
+				},
+				{
+					id: '3',
+					title: 'WC',
+					start: '2019-08-29'
+				}
+				]
+				});
+
+				calendar.render();
+			}
+		});
+		$(".page-link").removeClass("u");
+		$(this).addClass("u");
+	});
+
+	$("#page-link-dkp").click(function() {
+		$(".page").hide();
+		$("#page-dkp").fadeIn();
+		$(".page-link").removeClass("u");
+		$(this).addClass("u");
+	});
+
+	$("#page-link-contact").click(function() {
+		$(".page").hide();
+		$("#page-contact").fadeIn();
+		$(".page-link").removeClass("u");
+		$(this).addClass("u");
+	});
+
+	resizeBrowser();
+	$(window).resize(function() {
+		resizeBrowser();
+	});
+
+	function resizeBrowser() {
+		if($(window).outerWidth()<1100) {
+			console.log("below");
+			$("#logo").css("float","none");
+			$("#menu").css("float","none");
+			$(".page").css("margin-top","45px");
+		}
+		else {
+			$("#logo").css("float","left");
+			$("#menu").css("float","right");
+			$(".page").css("margin-top","0px");
+		}
+	}
+
+	
+</script>
+</body>
 </html>
