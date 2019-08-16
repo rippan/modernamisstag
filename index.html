@@ -620,14 +620,18 @@ a {
 
 	$(document).ready(function() {
 		resizeBrowser();
-		$(".container").fadeIn(700,function() {
-			$("#page-news-events-bottom").fadeIn();
-			resizeBrowser();
-			$("#logo-img").animate({top: '+=350px'}, 170,function() {
-				doBounce($("#logo-img"), 1, '15px', 60);   
-				resizeBrowser();
+		setTimeout(function() {
+			$(".container").fadeIn(500,function() {
+				setTimeout(function() {
+					$("#page-news-events-bottom").fadeIn();
+					resizeBrowser();
+					$("#logo-img").animate({top: '+=350px'}, 170,function() {
+						doBounce($("#logo-img"), 2, '15px', 60);   
+						resizeBrowser();
+					});
+				},100);
 			});
-		});
+		},300);
 	});
 </script>
 </body>
