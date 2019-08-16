@@ -33,6 +33,13 @@ body {
 	padding:0px;
 }
 
+hr {
+	height: 2px;
+    color: #777;
+    background-color: #777;
+    border: none;
+}
+
 a {
 	color:white;
 }
@@ -410,7 +417,7 @@ a {
 	calendar.render();
 
 	var events_html = "<div id='upcoming-events-header' style='text-align:center;margin-bottom:10px;font-size:22px;'>Kommande händelser</div>";
-	events_html += "<table id='upcoming-events-table' style='margin:0px auto;border-left:2px solid #3c3c3c;padding-left:10px;width: 390px;'><tbody>";
+	events_html += "<table id='upcoming-events-table' style='margin:0px auto;border-left:2px solid #777;padding-left:10px;width: 390px;'><tbody>";
 	$.each(events,function(key,val) {
 		events_html += '<tr style="color:#eee;"><td colspan="2" id="event-title-'+val.id+'" class="b">'+val.title+'</td></tr>';
 		events_html += '<tr style="color:#eee;"><td>Startar</td><td id="event-start-'+val.id+'">'+val.start+'</td></tr>';
@@ -498,7 +505,7 @@ a {
 		else {
 			$("#page-news-info").css("float","left").css("max-width","840px").removeClass("c");
 			$("#page-news-events").css("float","left");
-			$("#upcoming-events-table").css("border-left","2px solid #3c3c3c");
+			$("#upcoming-events-table").css("border-left","2px solid #777");
 		}
 
 		if($(window).outerWidth()<1100) {
