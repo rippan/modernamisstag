@@ -120,7 +120,7 @@ a {
 
 <img id="logo-img" src="img/logo.png" style="top:-320px;position:absolute;margin: auto;left: 0;right: 0;text-align: center;width:750px;" />		
 
-<div class="container" style="margin-top:300px;display:none;">
+<div class="container" style="margin-top:300px;display:none;padding-top:40px;">
 
 	<div class="border c" style="width:100%;height:50px;margin-top:20px;text-align: center;">
 		<a href="#news" class="page-link" id="page-link-news" style="text-decoration:underline;">Nyheter</a>
@@ -626,7 +626,8 @@ a {
 					$("#page-news-events-bottom").fadeIn();
 					resizeBrowser();
 					$("#logo-img").animate({top: '+=350px'}, 170,function() {
-						doBounce($("#logo-img"), 2, '15px', 60);   
+						doBounce($("#logo-img"), 1, '15px', 150);   
+						doBounce($(".container"), 2, '10px', 100);   
 						resizeBrowser();
 					});
 				},100);
