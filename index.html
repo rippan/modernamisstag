@@ -518,6 +518,19 @@ a {
 			$("#menu").css("float","right");
 			$(".page").css("margin-top","0px");
 		}
+
+		if($(window).outerWidth()<550) {
+			$("#logo-img").css("margin-top","-120px");
+			$("#container").css("margin-top","120px");
+		}
+		else if($(window).outerWidth()<700) {
+			$("#logo-img").css("margin-top","-150px");
+			$("#container").css("margin-top","150px");
+		}
+		else {
+			$("#logo-img").css("margin-top","-200px");
+			$("#container").css("margin-top","200px");
+		}
 	}
 
 	var anchor = window.location.hash.substr(1);
