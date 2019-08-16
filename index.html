@@ -42,7 +42,7 @@ a {
 .container {
 	width:90%;
 	margin:20px auto;
-	max-width:1000px;
+	max-width:1230px;
 	padding:20px;
 	border-radius: 5px;
 	background-color: #222;
@@ -119,15 +119,16 @@ a {
 
 <div class="container">
 	<div class="border" style="text-align: center;">
-		<img src="img/logo.png" style="max-width:100%;height:auto;" />
+		<img src="img/logo.png" style="max-width:100%;height:auto;padding: 20px 200px;" />
 	</div>
 
 	<div class="border c" style="width:100%;height:50px;margin-top:20px;text-align: center;">
 		<a href="#news" class="page-link" id="page-link-news" style="text-decoration:underline;">Nyheter</a>
 		<a href="#info" class="page-link" id="page-link-info">Information</a>
 		<a href="#calendar" class="page-link" id="page-link-calendar">Kalender</a>
-		<a href="#ss" class="page-link" id="page-link-ss">Skärmdumpar</a>
 		<a href="#dkp" class="page-link" id="page-link-dkp">DKP</a>
+		<a href="#ss" class="page-link" id="page-link-ss">Skärmdumpar</a>
+		<a href="#roster" class="page-link" id="page-link-roster">Medlemmar</a>
 		<a href="#contact" class="page-link" id="page-link-contact">Kontakt</a>
 	</div>
 	
@@ -217,7 +218,7 @@ a {
 		<div id="fullcalendar"></div>
 		<div id="event" style="margin-top: 20px;border: 1px solid #999999;background-color: #9b0000;padding: 10px;display:none;">
 			
-			<table border=0>
+			<table>
 				<tbody>
 				<tr><td colspan="2" id="event-title" class="b"></div></td></tr>
 				<tr><td>Startar</td><td id="event-start"></div></td></tr>
@@ -231,6 +232,11 @@ a {
 
 	<div id="page-dkp" class="page border hide">
 		<div class="b">DKP kommer snart</div>
+	</div>
+
+	<div id="page-roster" class="page border hide">
+		<div class="b">Medlemmar</div>
+		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRdwOGWN1imkHbVNqoPZ4CF-4jVWk7PnCIB0T3sg0AonbwDezdLLhaUxYSjiULvLc10HDoYqrBgECmV/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%;height:1000px;"></iframe>
 	</div>
 
 	<div id="page-contact" class="page border hide">
@@ -256,7 +262,7 @@ a {
 	var calendarEl = document.getElementById('fullcalendar');
 	var calendar = new FullCalendar.Calendar(calendarEl, {
 	plugins: [ 'dayGrid'],
-	height: 700,
+	height: 800,
 	locale: 'sv',
 	firstDay:1,
 	weekNumbers:true,
@@ -353,6 +359,13 @@ a {
 		$(this).css("text-decoration","underline");
 	});
 
+	$("#page-link-roster").click(function() {
+		$(".page").hide();
+		$("#page-roster").fadeIn();
+		$(".page-link").css("text-decoration","");
+		$(this).css("text-decoration","underline");
+	});
+
 	$("#page-link-contact").click(function() {
 		$(".page").hide();
 		$("#page-contact").fadeIn();
@@ -395,14 +408,15 @@ a {
 	else if(anchor == "dkp") {
 		$("#page-link-dkp").click();
 	}
+	else if(anchor == "roster") {
+		$("#page-link-roster").click();
+	}
 	else if(anchor == "contact") {
 		$("#page-link-contact").click();
 	}
 	else {
 		$("#page-link-news").click();
 	}
-
-
 
 	//Countdown
 	// Set the date we're counting down to
