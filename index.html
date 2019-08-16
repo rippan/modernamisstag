@@ -130,24 +130,39 @@ a {
 		<a href="#contact" class="page-link" id="page-link-contact">Kontakt</a>
 	</div>
 	
-	<div id="page-news" class="page border hide">
+	<div id="page-news" class="page border hide" style="overflow:auto;">
 
-		<div class="p">Moderna Misstag är en <u>svensk semi-hardcore Classic WoW Horde-guild</u> som startade sin resa under Vanilla WoW. Guilden drivs i mångt och mycket av samma spelare nu som då, och har samlat på sig mycket erfarenhet under åren. En av guildens grundpelare är att erbjuda en rolig och avslappnad raid-miljö som fungerar med vuxenlivet. Guildens mål är att raida två till tre dagar i veckan under kontrollerade och fokuserade former för att få lämplig progress.</div>
-		<div class="p">Shazzrah PvP är den server vi kommer spela på om någon har missat. Registrera era namn på servern sen börjar vi räkna timmar till launch!</div>
+		<div id="page-news-info" style="border:0px solid red;float:left;max-width:840px;">
+			<div class="p">Moderna Misstag är en <u>svensk semi-hardcore Classic WoW Horde-guild</u> som startade sin resa under Vanilla WoW. Guilden drivs i mångt och mycket av samma spelare nu som då, och har samlat på sig mycket erfarenhet under åren. En av guildens grundpelare är att erbjuda en rolig och avslappnad raid-miljö som fungerar med vuxenlivet. Guildens mål är att raida två till tre dagar i veckan under kontrollerade och fokuserade former för att få lämplig progress.</div>
+			<div class="p">Shazzrah PvP är den server vi kommer spela på om någon har missat. Registrera era namn på servern sen börjar vi räkna timmar till launch!</div>
+			<div style="margin:0px auto;text-align: center;font-size:22px;text-align: center;
+			font-size: 20px;
+			border: 1px solid #927300;
+			border-radius: 5px;
+			width: 270px;
+			padding: 10px;
+			background-color:#111;">
+			<img src="img/icons/time.jpg"><br>
+				Nedräkning till WoW Classic
+				<div id="countdown"></div>
+			</div>
+			<div class="c p">
+				<a href="https://discord.gg/4tfTzUF"><img src="img/Discord-Logo-Color.png" style="height:80px;margin-top:20px;"/></a><br />
+				<a href="https://discord.gg/4tfTzUF">Läs mer och chatta med oss på Discord!</a>
+			</div>
+		</div>
 
-		<div style="text-align: center;font-size:22px;">
-			Nedräkning till WoW Classic<div id="countdown"></div>
+		<div id="page-news-events" style="border:0px solid red;float:left;">
+				<div id="upcoming-events"></div>
+			</div>
+	
+		<div id="page-news-articles" style="border:0px solid red;margin-top:20px;float:left;">
+			<div class="c" style="position:relative;border:0px solid red;">
+				<div class="img-title">2019-08-11 RFC clear på stresstest</div>
+				<img src="img/ss/1.jpg" style="border-radius:5px;max-width: 100%;max-height: 100%;" />
+			</div>
 		</div>
-		<br>
-		<div class="c" style="position:relative;border:0px solid red;">
-			<div class="img-title">2019-08-11 RFC clear på stresstest</div>
-			<img src="img/ss/1.jpg" style="border-radius:5px;max-width: 100%;max-height: 100%;" />
-		</div>
-
-		<div class="c p">
-			<a href="https://discord.gg/4tfTzUF"><img src="img/Discord-Logo-Color.png" /></a><br />
-			<a href="https://discord.gg/4tfTzUF">Läs mer och chatta med oss på Discord!</a>
-		</div>
+	
 	</div>
 
 	<div id="page-info" class="page border hide">
@@ -215,16 +230,14 @@ a {
 	<div id="page-calendar" class="page border hide">
 		<div id="fullcalendar"></div>
 		<div id="event" style="margin-top: 20px;border: 1px solid #999999;background-color: #9b0000;padding: 10px;display:none;">
-			
 			<table>
 				<tbody>
-				<tr><td colspan="2" id="event-title" class="b"></div></td></tr>
-				<tr><td>Startar</td><td id="event-start"></div></td></tr>
-				<tr><td>Slutar</td><td id="event-end"></div></td></tr>
-				<tr><td colspan="2" id="event-content"></div></td></tr>
+				<tr><td colspan="2" id="event-title" class="b"></td></tr>
+				<tr><td>Startar</td><td id="event-start"></td></tr>
+				<tr><td>Slutar</td><td id="event-end"></td></tr>
+				<tr><td colspan="2" id="event-content"></td></tr>
 				</tbody>
 			</table>
-			<div id="event-content" style="margin-top:10px;"></div>
 		</div>
 	</div>
 
@@ -257,14 +270,7 @@ a {
 </div>
 
 <script>
-	var calendarEl = document.getElementById('fullcalendar');
-	var calendar = new FullCalendar.Calendar(calendarEl, {
-	plugins: [ 'dayGrid'],
-	height: 800,
-	locale: 'sv',
-	firstDay:1,
-	weekNumbers:true,
-	events: [{
+	var events = [{
 			id: '1',
 			title: 'LAUNCH',
 			start: '2019-08-27 00:00',
@@ -284,40 +290,60 @@ a {
 			end: '2019-08-29 22:30',
 			extendedProps: ["Wailing Caverns 5 man instance, level 15-28"]
 		}
-	],
-	eventClick: function(e) {
-		console.log(e);
-		$("#event-title").html(e.event.title);
+	];
+	var calendarEl = document.getElementById('fullcalendar');
+	var calendar = new FullCalendar.Calendar(calendarEl, {
+		plugins: [ 'dayGrid'],
+		height: 800,
+		locale: 'sv',
+		firstDay:1,
+		weekNumbers:true,
+		events: events,
+		eventClick: function(e) {
+			console.log(e);
+			$("#event-title").html(e.event.title);
 
-		var date = e.event.start;
-		var year = date.getFullYear();
-		var month = ('0' + (date.getMonth()+1)).slice(-2);
-		var day = ('0' + (date.getDate())).slice(-2);
-		var hours = ('0' + (date.getHours())).slice(-2);
-		var minutes = ('0' + (date.getMinutes())).slice(-2);
-		
-		$("#event-start").html(year + "-" + month + "-" + day + " " + hours + ":" + minutes);
-
-
-		if(e.event.end) {
-			var date = e.event.end;
+			var date = e.event.start;
 			var year = date.getFullYear();
 			var month = ('0' + (date.getMonth()+1)).slice(-2);
 			var day = ('0' + (date.getDate())).slice(-2);
 			var hours = ('0' + (date.getHours())).slice(-2);
 			var minutes = ('0' + (date.getMinutes())).slice(-2);
-			
-			$("#event-end").html(year + "-" + month + "-" + day + " " + hours + ":" + minutes);
+			$("#event-start").html(year + "-" + month + "-" + day + " " + hours + ":" + minutes);
+
+			if(e.event.end) {
+				var date = e.event.end;
+				var year = date.getFullYear();
+				var month = ('0' + (date.getMonth()+1)).slice(-2);
+				var day = ('0' + (date.getDate())).slice(-2);
+				var hours = ('0' + (date.getHours())).slice(-2);
+				var minutes = ('0' + (date.getMinutes())).slice(-2);
+				
+				$("#event-end").html(year + "-" + month + "-" + day + " " + hours + ":" + minutes);
+			}
+			else {
+				$("#event-end").html("-");
+			}
+			$("#event-content").html(e.event.extendedProps[0]);
+			$("#event").fadeIn();
 		}
-		else {
-			$("#event-end").html("-");
-		}
-		$("#event-content").html(e.event.extendedProps[0]);
-		$("#event").fadeIn();
-	}
 	});
 
 	calendar.render();
+
+	var events_html = "<div id='upcoming-events-header' style='text-align:center;margin-bottom:10px;font-size:22px;'>Kommande händelser</div>";
+	events_html += "<table id='upcoming-events-table' style='margin:0px auto;border-left:2px solid #111;padding-left:10px;width: 390px;'><tbody>";
+	$.each(events,function(key,val) {
+		events_html += '<tr style="color:#eee;"><td colspan="2" id="event-title-'+val.id+'" class="b">'+val.title+'</td></tr>';
+		events_html += '<tr style="color:#eee;"><td>Startar</td><td id="event-start-'+val.id+'">'+val.start+'</td></tr>';
+		if(val.end) {
+			events_html += '<tr style="color:#eee;"><td>Slutar</td><td id="event-end-'+val.id+'">'+val.end+'</td></tr>';	
+		}
+		events_html += '<tr style="color:#ccc;"><td colspan="2" id="event-content-'+val.id+'">'+val.extendedProps[0]+'<br><hr></td></tr>';
+		
+	});
+	events_html += '</tbody></table>';
+	$("#upcoming-events").html(events_html);
 
 	$("#logo-img").click(function() {
 		$("#page-link-news").click();
@@ -381,8 +407,19 @@ a {
 	});
 
 	function resizeBrowser() {
+
+		if($(window).outerWidth()<1400) {
+			$("#page-news-info").css("float","none").css("max-width","fit-content").addClass("c");
+			$("#page-news-events").css("float","none");
+			$("#upcoming-events-table").css("border-left","0px");
+		}
+		else {
+			$("#page-news-info").css("float","left").css("max-width","840px").removeClass("c");
+			$("#page-news-events").css("float","left");
+			$("#upcoming-events-table").css("border-left","2px solid #111");
+		}
+
 		if($(window).outerWidth()<1100) {
-			console.log("below");
 			$("#logo").css("float","none");
 			$("#menu").css("float","none");
 			$(".page").css("margin-top","45px");
@@ -421,43 +458,24 @@ a {
 	}
 
 	//Countdown
-	// Set the date we're counting down to
 	var countDownDate = new Date("Aug 27, 2019 00:00").getTime();
-
-	// Get today's date and time
 	var now = new Date().getTime();
-			
-	// Find the distance between now and the count down date
 	var distance = countDownDate - now;
-		
-	// Time calculations for days, hours, minutes and seconds
 	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		
-	// Output the result in an element with id="demo"
 	document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-	// Update the count down every 1 second
 	var x = setInterval(function() {
-
-		// Get today's date and time
 		var now = new Date().getTime();
-			
-		// Find the distance between now and the count down date
 		var distance = countDownDate - now;
-			
-		// Time calculations for days, hours, minutes and seconds
 		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-			
-		// Output the result in an element with id="demo"
 		document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-			
-		// If the count down is over, write some text 
+
 		if (distance < 0) {
 			clearInterval(x);
 			document.getElementById("countdown").innerHTML = "WAITING FOR LOGIN SERVER!";
