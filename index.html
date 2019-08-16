@@ -119,7 +119,7 @@ a {
 
 <div class="container">
 	<div class="border" style="text-align: center;margin:0px auto;max-width:750px;">
-		<img src="img/logo.png" style="max-width:100%;height:auto;" />
+		<img id="logo-img" src="img/logo.png" style="max-width:100%;height:auto;cursor:pointer;" />
 	</div>
 
 	<div class="border c" style="width:100%;height:50px;margin-top:20px;text-align: center;">
@@ -320,6 +320,10 @@ a {
 	});
 
 	calendar.render();
+
+	$("#logo-img").click(function() {
+		$("#page-link-news").click();
+	});
 
 	$("#page-link-news").click(function() {
 		$(".page").hide();
