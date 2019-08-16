@@ -150,9 +150,8 @@ a {
 				</div>
 			</div>
 
-			<div id="page-news-events" style="position:absolute;top:0px;right:0px;margin-bottom:20px;">
+			<div id="page-news-events-top" style="position:absolute;top:0px;right:0px;margin-bottom:20px;">
 				<div id="upcoming-events"></div>
-				<iframe src="https://discordapp.com/widget?id=268790775586750466&theme=dark" style="width:370px;margin:10px auto;display: block;padding-left:10px;" height="500" allowtransparency="true" frameborder="0"></iframe>
 			</div>
 
 			<div id="page-news-info-bottom" style="border:0px solid red;max-width:800px;position:relative;">
@@ -160,6 +159,9 @@ a {
 					<img src="img/ss/1.jpg" style="border-radius:5px;max-width: 100%;" />
 			</div>
 
+			<div id="page-news-events-bottom" style="position:absolute;top:350px;right:0px;margin-bottom:20px;">
+				<iframe src="https://discordapp.com/widget?id=268790775586750466&theme=dark" style="width:370px;margin:10px auto;display: block;padding-right:5px;" height="500" allowtransparency="true" frameborder="0"></iframe>
+			</div>
 	</div>
 
 	<div id="page-info" class="page border hide">
@@ -492,18 +494,21 @@ a {
 	});
 
 	function resizeBrowser() {
-
-		
-
 		if($(window).outerWidth()<1000) {
-			$("#page-news-events").css("position","relative");
+			$("#page-news-events-top").css("position","relative");
+			$("#page-news-events-bottom").css("position","relative");
+			$("#page-news-events-bottom").css("top","auto");
 			$("#page-news-info-top").width($(".container").width());
 			$("#page-news-info-bottom").width($(".container").width());
+			
 		}
 		else {
-			$("#page-news-events").css("position","absolute");
-			$("#page-news-info-top").width($(".container").width()-$("#page-news-events").width());
-			$("#page-news-info-bottom").width($(".container").width()-$("#page-news-events").width());
+			$("#page-news-events-top").css("position","absolute");
+			$("#page-news-events-bottom").css("position","absolute");
+			$("#page-news-events-bottom").offset({top:$("#page-news-events-top").offset().top+$("#page-news-events-top").height()});
+			$("#page-news-info-top").width($(".container").width()-$("#page-news-events-top").width());
+			$("#page-news-info-bottom").width($(".container").width()-$("#page-news-events-top").width());
+			
 		}
 		
 
