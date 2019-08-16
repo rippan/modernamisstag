@@ -132,8 +132,8 @@ a {
 	
 	<div id="page-news" class="page border hide">
 
-		<div  style="overflow:auto;">
-			<div id="page-news-info" style="border:0px solid red;float:left;max-width:840px;">
+		<div style="overflow:auto;border:0px solid red;">
+			<div id="page-news-info" style="border:0px solid red;float:left;">
 				<div class="p">Moderna Misstag är en <u>svensk semi-hardcore Classic WoW Horde-guild</u> som startade sin resa under Vanilla WoW. Guilden drivs i mångt och mycket av samma spelare nu som då, och har samlat på sig mycket erfarenhet under åren. En av guildens grundpelare är att erbjuda en rolig och avslappnad raid-miljö som fungerar med vuxenlivet. Guildens mål är att raida två till tre dagar i veckan under kontrollerade och fokuserade former för att få lämplig progress.</div>
 				<div class="p">Shazzrah PvP är den server vi kommer spela på om någon har missat. Registrera era namn på servern sen börjar vi räkna timmar till launch!</div>
 				<div style="margin:0px auto;text-align: center;font-size:22px;text-align: center;
@@ -490,7 +490,8 @@ a {
 	function resizeBrowser() {
 
 		if($(window).outerWidth()<1400) {
-			$("#page-news-info").css("float","none").css("max-width","fit-content").addClass("c");
+			
+			$("#page-news-info").css("float","none").css("max-width","100%").addClass("c");
 			$("#page-news-events").css("float","none");
 			$("#upcoming-events-table").css("border-left","0px");
 		}
