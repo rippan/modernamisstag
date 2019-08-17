@@ -435,17 +435,29 @@ a {
 		var maxdmg = 300;
 		var bouncerate = 100;
 		var dmg = Math.floor(Math.random() * maxdmg) + 1;
-		var time = Math.round(dmg/bouncerate)*50;
+		var time = dmg*2;
 		var bounce = Math.round(dmg/bouncerate);
 
-		console.log("dmg "+dmg);
-		console.log("time "+time);
-		console.log("bounce "+bouncerate);
+		if(dmg > 290) {
+			dmg = 15000;
+			bounce = 10;
+			doBounce($("#logo-img"), 1, dmg+'px', 900);
+			setTimeout(function() {
+				doBounce($(".container"), bounce, '30px', 100);   
+			},1800);
+		}
+		else {
+			doBounce($("#logo-img"), 1, dmg+'px', dmg);
+			setTimeout(function() {
+				doBounce($(".container"), bounce, dmg/5+'px', 100);   
+			},time);
+		}
 
-		doBounce($("#logo-img"), 1, dmg+'px', 150);
-		setTimeout(function() {
-			doBounce($(".container"), bounce, dmg/5+'px', 100);   
-		},time);
+		console.log("dmg "+dmg);
+		console.log("bounce "+bounce);
+		console.log("----------");
+
+
 		
 	});
 	document.getElementById('logo-img').ondragstart = function() { return false; };
