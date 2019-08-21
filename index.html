@@ -37,6 +37,13 @@ body {
 }
 
 #logo-img {
+	top:-320px;
+	position:absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width:750px;
 	cursor: url("img/cursor/sulfuras.png"), auto;
 }
 
@@ -45,6 +52,14 @@ body {
 }
 
 #slut {
+	position: fixed;
+	bottom:-300px; 
+	margin: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index:1;
+	display:none;
 	cursor: url("img/cursor/sulfuras.png"), auto;
 }
 
@@ -142,8 +157,8 @@ a {
 <body style="padding:10px;">
 
 
-<img id="slut" src="img/slut/1.png" class="animated faster" style="position: fixed;bottom:-300px; margin: auto;left: 0;right: 0;text-align: center;z-index:1;display:none;" />		
-<img id="logo-img" src="img/logo.png" style="top:-320px;position:absolute;margin: auto;left: 0;right: 0;text-align: center;width:750px;" />		
+<img id="slut" src="img/slut/1.png" class="animated faster" />		
+<img id="logo-img" src="img/logo.png" />		
 
 <div class="container" style="margin-top:300px;display:none;padding-top:40px;">
 
@@ -667,8 +682,6 @@ a {
 		console.log("dmg "+dmg);
 		console.log("bounce "+bounce);
 		console.log("----------");
-
-
 		
 	});
 	document.getElementById('logo-img').ondragstart = function() { return false; };
