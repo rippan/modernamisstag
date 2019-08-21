@@ -10,7 +10,7 @@ function slutShow(time,bounce) {
     //faster	500ms
     
     if(bounce==1) {
-        slideUpPixels = 120;
+        slideUpPixels = 130;
     }
     else if(bounce==2) {
         slideUpPixels = 200;
