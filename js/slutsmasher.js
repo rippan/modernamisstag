@@ -10,10 +10,10 @@ function slutShow(time,bounce) {
     //faster	500ms
     
     if(bounce==1) {
-        slideUpPixels = 100;
+        slideUpPixels = 120;
     }
     else if(bounce==2) {
-        slideUpPixels = 175;
+        slideUpPixels = 200;
     }
     else if(bounce==3) {
         slideUpPixels = 350;
@@ -68,6 +68,8 @@ $(document).ready(function() {
         if(currenthits<9) {
             currenthits++;
             $("#slut").attr("src","img/slut/"+currenthits+".png");
+            clearTimeout(timeout);
+            $("#slut").removeClass(removeAnimationClass).addClass("slideOutDown"); 
         }
         else {
             $("#slut").attr("src","img/slut/10.png");
