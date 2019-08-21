@@ -1,53 +1,78 @@
-
+var animationTimer = 500;
+var idle = 0;
 var timeout;
 
-function slutDownUp() {
-    $("#slut").css("bottom","-650px;").show();
-    $("#slut").addClass("slideInUp");
-    timeout = setTimeout(function() {
-        $("#slut").removeClass("slideInUp").addClass("rotateOutDownRight"); 
+function slutShow(time,bounce) {
+    var animation = 1;
+    //slower	3s
+    //slow  	2s
+    //fast	    800ms
+    //faster	500ms
+    
+    if(bounce==1) {
+        slideUpPixels = 100;
+    }
+    else if(bounce==2) {
+        slideUpPixels = 175;
+    }
+    else if(bounce==3) {
+        slideUpPixels = 350;
+    }
+
+    removeAnimationClass = "slideInUp slideOutDown";
+
+    // random bottom up
+    if(animation==1 && bounce>0) {
+        $("#slut").show().offset({
+            top:$(window).height()-slideUpPixels,
+            left: Math.floor(Math.random() * ($(window).outerWidth() - $("#slut").width()))
+        });
+
+        $("#slut").addClass("slideInUp");
         timeout = setTimeout(function() {
-            $("#slut").removeClass("rotateOutDownRight").hide();
-        },800);
-    },800);
+            $("#slut").removeClass(removeAnimationClass).addClass("slideOutDown"); 
+            timeout = setTimeout(function() {
+                $("#slut").removeClass(removeAnimationClass).hide();
+            },animationTimer);
+        },animationTimer + time);
+    }
+
+    // random falling
+    if(animation==2 && bounce>0) {
+        $("#slut").show().offset({
+            top:-500,
+            left: Math.floor(Math.random() * ($(window).outerWidth() - $("#slut").width()))
+        });
+
+        $("#slut").addClass("slideInUp");
+        timeout = setTimeout(function() {
+            $("#slut").removeClass(removeAnimationClass).addClass("slideOutDown"); 
+            timeout = setTimeout(function() {
+                $("#slut").removeClass(removeAnimationClass).hide();
+            },animationTimer);
+        },animationTimer + time);
+    }
 }
 
-// ON HIT, GNOME LOOKS
-// HORDE IS GAY
-
-//WOW INSULTS
-
-// EXPLODE ANIMATION
-
-// RAINING BLOOD
-
-//KEK
-
-// rotate 90 from side
-function slutDeadAnimation1() {
-
+function slutGame() {
+    setTimeout(function() {
+        slutShow();
+    },2000);
 }
 
 $(document).ready(function() {
+
     var currenthits = 1;
     $("#slut").click(function() {
         
         if(currenthits<9) {
             currenthits++;
-            console.log("TIMEOUT STOP");
             $("#slut").attr("src","img/slut/"+currenthits+".png");
-            $("#slut").removeClass("slideInUp").addClass("rotateOutDownRight").fadeOut(); 
-            clearTimeout(timeout);
         }
-        /*
         else {
-            currenthits = 1;
-            $("#slut").removeClass("slideInUp").addClass("rotateOutDownRight").fadeOut(); 
-            setTimeout(function() {
-                $("#slut").removeClass("rotateOutDownRight");
-            },800);
+            $("#slut").attr("src","");
         }
-        */
+
     });
 
 });

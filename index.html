@@ -52,14 +52,11 @@ body {
 }
 
 #slut {
+	display:block;
 	position: fixed;
-	bottom:-300px; 
-	margin: auto;
 	left: 0;
 	right: 0;
-	text-align: center;
 	z-index:1;
-	display:none;
 	cursor: url("img/cursor/sulfuras.png"), auto;
 }
 
@@ -153,11 +150,18 @@ a {
 	margin-bottom:20px;
 }
 
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 </style>
 <body style="padding:10px;">
 
 
-<img id="slut" src="img/slut/1.png" class="animated faster" />		
+<img id="slut" src="img/slut/1.png" class="animated faster" style="display:none;" />		
 <img id="logo-img" src="img/logo.png" />		
 
 <div class="container" style="margin-top:300px;display:none;padding-top:40px;">
@@ -661,7 +665,7 @@ a {
 		var maxdmg = 300;
 		var bouncerate = 100;
 		var dmg = Math.floor(Math.random() * maxdmg) + 1;
-		var time = dmg*2;
+		var time = dmg*1.5;
 		var bounce = Math.round(dmg/bouncerate);
 
 		if(dmg > 290) {
@@ -669,15 +673,18 @@ a {
 			bounce = 10;
 			doBounce($("#logo-img"), 1, dmg+'px', 900);
 			setTimeout(function() {
+				slutShow(1600,bounce);
 				doBounce($(".container"), bounce, '30px', 100);   
 			},1800);
 		}
 		else {
 			doBounce($("#logo-img"), 1, dmg+'px', dmg);
 			setTimeout(function() {
+				slutShow(time,bounce);
 				doBounce($(".container"), bounce, dmg/5+'px', 100);   
 			},time);
 		}
+		
 
 		console.log("dmg "+dmg);
 		console.log("bounce "+bounce);
