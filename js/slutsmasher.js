@@ -64,13 +64,13 @@ $(document).ready(function() {
 
     var currenthits = 1;
     $("#slut").click(function() {
-        
+
         if(currenthits<9) {
             currenthits++;
             $("#slut").attr("src","img/slut/"+currenthits+".png");
         }
         else {
-            $("#slut").attr("src","");
+            $("#slut").attr("src","img/slut/10.png");
         }
 
     });
