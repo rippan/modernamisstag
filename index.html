@@ -8,11 +8,13 @@
 	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 	<script src="jquery.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href='css/animate.min.css' rel='stylesheet' />
 	<link href='js/fullcalendar/core/main.custom.css' rel='stylesheet' />
     <link href='js/fullcalendar/daygrid/main.min.css' rel='stylesheet' />
     <script src='js/fullcalendar/core/main.min.js'></script>
 	<script src='js/fullcalendar/daygrid/main.min.js'></script>
 	<script src='js/fullcalendar/core/locales/sv.js'></script>
+	<script src='js/slutsmasher.js'></script>
 	
 </head>
 <style>
@@ -39,6 +41,14 @@ body {
 }
 
 #logo-img:active {
+	cursor: url("img/cursor/sulfuras_click.png"), auto;
+}
+
+#slut {
+	cursor: url("img/cursor/sulfuras.png"), auto;
+}
+
+#slut:active {
 	cursor: url("img/cursor/sulfuras_click.png"), auto;
 }
 
@@ -131,6 +141,8 @@ a {
 </style>
 <body style="padding:10px;">
 
+
+<img id="slut" src="img/slut/1.png" class="animated faster" style="position: fixed;bottom:-300px; margin: auto;left: 0;right: 0;text-align: center;z-index:1;display:none;" />		
 <img id="logo-img" src="img/logo.png" style="top:-320px;position:absolute;margin: auto;left: 0;right: 0;text-align: center;width:750px;" />		
 
 <div class="container" style="margin-top:300px;display:none;padding-top:40px;">
@@ -660,6 +672,7 @@ a {
 		
 	});
 	document.getElementById('logo-img').ondragstart = function() { return false; };
+	document.getElementById('slut').ondragstart = function() { return false; };
 
 	$("#page-link-news").click(function() {
 		$(".page").hide();
