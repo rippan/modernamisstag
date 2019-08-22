@@ -1,3 +1,4 @@
+// THIS IS SLUTSMASHER, I FUCKING HATE GNOMES IM GONNA STICK MY ORC DICK UP A GNOMES ASS 
 var animationTimer = 500;
 var idle = 0;
 var timeout;
