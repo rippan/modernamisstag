@@ -357,8 +357,26 @@ a {
 			<br><br>
 			Vi ser gärna att våra guildies donerar till guildbanken och för att belöna de som gör det väljer vi att ge DKP i gengäld. Det kommer inte vara så att den här typen av extra DKP kommer att generera mer än raiding men vi försöker lägga den på en nivå så det känns värt att hjälpa guildbanken. Det kommer finnas en gräns för hur mycket extra DKP man kan samla in varje vecka. 
 			<br><br>
-			Mängden DKP man får för olika items kommer variera beroende på guildbankens behov.
+			Mängden DKP man får för olika items kommer variera beroende på marknadspriser och guildbankens behov.
 			<br>
+
+
+			<table style="margin-bottom:5px;font-size:18px;background-color:#111;padding:10px;border-radius:5px;margin-top:20px;">
+				<tbody>
+					<tr><td style="width:400px;">Greater Fire Protection Potion</td><td align="right">5.75</td><td>G</td></tr>
+					<tr><td>Elemental Fire</td><td align="right">4.30</td><td>G</td></tr>
+					<tr><td>Major Mana Potion</td><td align="right">2</td><td>G</td></tr>
+					<tr><td>Fire Protection Potion</td><td align="right">1.14</td><td>G</td></tr>
+					<tr><td>Arcane Protection Potion</td><td align="right">1</td><td>G</td></tr>
+					<tr><td>Flame Sac</td><td align="right">90</td><td>S</td></tr>
+					<tr><td>Dream Foil</td><td align="right">47</td><td>S</td></tr>
+					<tr><td>Ice Cap</td><td align="right">20</td><td>S</td></tr>
+					<tr><td>Nightfin Soup</td><td align="right">20</td><td>S</td></tr>
+				</tbody>
+			</table>
+			<i style="color:#888;">Uppdaterad 2019-10-20</i>
+			
+
 		</div>
 
 		<div class="b" style="font-size:22px;">Decay</div>
@@ -600,26 +618,35 @@ a {
 </div>
 
 <script>
-	var events = [{
-			id: '1',
-			title: 'LAUNCH',
-			start: '2019-08-27 00:00',
-			extendedProps: ["World of Warcraft Classic börjar!"]
+	var events = [
+		{
+			id: 97,
+			title: 'MC',
+			start: '2019-10-20 19:30',
+			end: '2019-10-20 22:30',
+			extendedProps: ["Molten Core första guildrun"]
 		},
 		{
-			id: '2',
+			id: 98,
+			title: 'WC',
+			start: '2019-08-29 19:30',
+			end: '2019-08-29 22:30',
+			extendedProps: ["Wailing Caverns 5 man instance, level 15-28"]
+		},
+		{
+			id: 99,
 			title: 'RFC',
 			start: '2019-08-28 19:30',
 			end: '2019-08-28 22:30',
 			extendedProps: ["Ragefire Chasm 5 man instance, level 12-15 instance"]
 		},
 		{
-			id: '3',
-			title: 'WC',
-			start: '2019-08-29 19:30',
-			end: '2019-08-29 22:30',
-			extendedProps: ["Wailing Caverns 5 man instance, level 15-28"]
+			id: 100,
+			title: 'LAUNCH',
+			start: '2019-08-27 00:00',
+			extendedProps: ["World of Warcraft Classic börjar!"]
 		}
+
 	];
 	var calendarEl = document.getElementById('fullcalendar');
 	var calendar = new FullCalendar.Calendar(calendarEl, {
