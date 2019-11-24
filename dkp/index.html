@@ -1,4 +1,1296 @@
-<div id="LootHistory" class="tab" style="display:none;"><div class="divTable" style="width: 50%;border: 1px solid #000;">
+<html>
+<script>
+function openTab(tabName) {
+   var i;
+   var x = document.getElementsByClassName("tab");
+   for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+   }
+   document.getElementById(tabName).style.display = "block";
+}
+</script>
+<script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script><script src="https://wow.zamimg.com/widgets/power.js"></script>
+<style>
+html { background-color: #000; };
+.divTable{ display: table; float: left; margin: 10px 10px; }
+.divTableRow { display: table-row; background-color: #000}
+.divTableRow:hover { background-color: #222; }
+.divTableHeading { background-color: #EEE; display: table-header-group; }
+.divTableCell, .divTableHead { border: 1px solid #999999; display: table-cell; padding: 3px 10px; }
+.divPlayer { border: 1px solid #999999; display: table-cell; width: 700px; padding: 3px 10px; text-align: left; vertical-align: middle; word-wrap: normal; color: #ffffff; }
+.divClass { border: 1px solid #999999; display: table-cell; padding: 3px 10px; text-align: center; vertical-align: middle; color: #ffffff; }
+.divDKP { border: 1px solid #999999; display: table-cell; width: 200px%; padding: 3px 10px; text-align: center; vertical-align: middle; color: #ffffff; }
+.divPlayerHeader { border: 1px solid #999999; display: table-cell; font-weight: bold; width: 50%; padding: 3px 10px; text-align: left; background-color: #bbb; }
+.divClassHeader { border: 1px solid #999999; display: table-cell; font-weight: bold; width: 150px; padding: 3px 10px; text-align: center; background-color: #bbb; }
+.divDKPHeader { border: 1px solid #999999; display: table-cell; font-weight: bold; width: 30%; padding: 3px 10px; text-align: center; background-color: #bbb; }
+.divTableHeading { background-color: #EEE; display: table-header-group; font-weight: bold; }
+.divTableFoot { background-color: #EEE; display: table-footer-group; font-weight: bold; }
+.divTableBody { display: table-row-group; }
+</style>
+
+<br /><br />
+<div>
+   <button onclick="openTab('DKP')">DKP Table</button>
+   <button onclick="openTab('DKPHistory')">DKP History</button>
+   <button onclick="openTab('LootHistory')">Loot History</button>
+</div>
+<br /><br />
+<div id="DKP" class="tab"><div class="divTable" style="width: 30%;border: 1px solid #000;">
+   <div class="divTableBody">
+      <div class="divTableRow">
+         <div class="divPlayerHeader">Player</div>
+         <div class="divClassHeader">Class</div>
+         <div class="divDKPHeader">DKP</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ageis</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">151</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Altangolv</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" height="24" width="24" /></div>
+         <div class="divDKP">281</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ancile</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">194</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ansikte</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">294</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Baggo</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">554</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Blahblah</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">250</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Cronor</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">397</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Dishonest</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">323</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Fireguy</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">281</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Frostweaver</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">58</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Goagubbe</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">13</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Gorach</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">29</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Goshnak</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">264</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Hundmat</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" height="24" width="24" /></div>
+         <div class="divDKP">131</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ingelit</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" height="24" width="24" /></div>
+         <div class="divDKP">271</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Jobbjobb</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">31</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Kanaki</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">309</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Katherine</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">156</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Kozalkort</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">320</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Lillsiv</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_hunter.jpg" height="24" width="24" /></div>
+         <div class="divDKP">205</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Lurifax</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">158</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Lykk</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">56</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Mammaspojke</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">392</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Manticorah</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">126</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Marabou</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" height="24" width="24" /></div>
+         <div class="divDKP">15</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Medhelp</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">245</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Muppsen</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">77</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Oroligmage</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">500</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Orvar</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">240</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Padroni</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">276</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Paso</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">573</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Pendji</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">410</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Petramage</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">255</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Railtracer</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">578</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Rebanc</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" height="24" width="24" /></div>
+         <div class="divDKP">182</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Rippan</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" height="24" width="24" /></div>
+         <div class="divDKP">310</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Röjarralf</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">31</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Selma</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_hunter.jpg" height="24" width="24" /></div>
+         <div class="divDKP">449</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Shaparaq</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">578</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Slitz</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">298</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Smaitama</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">392</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Stekn</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">360</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Timanttila</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">519</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Twizz</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">458</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Zaggiezug</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">155</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Zinfandel</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">5</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Zteffo</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">93</div>
+      </div>
+   </div>
+</div>
+</div>
+<div id="DKPHistory" class="tab" style="display:none;"><div class="divTable" style="width: 95%;border: 1px solid #000;">
+    <div class="divTableBody">
+       <div class="divTableRow">
+          <div class="divPlayerHeader">Players</div>
+          <div class="divClassHeader" style="width: 4%;">DKP</div>
+          <div class="divDKPHeader">Date/Reason</div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Frostweaver, Zinfandel, Paso, Fireguy, Kanaki, Katherine, Ingelit, Gorach, Timanttila, Baggo, Shaparaq, Mammaspojke, Dishonest, Railtracer, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 21/11<br />(11/21/19 17:35:49) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Goshnak, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - End Raid Bonus<br />(11/20/19 22:29:32) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Cronor, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - End Raid Bonus<br />(11/20/19 22:29:09) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - End Raid Bonus<br />(11/20/19 22:26:28) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Altangolv, Ancile, Baggo, Blahblah, Dishonest, Fireguy, Frostweaver, Gorach, Jobbjobb, Kanaki, Katherine, Lillsiv, Mammaspojke, Muppsen, Oroligmage, Orvar, Paso, Pendji, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Smaitama, Stekn, Timanttila, Marabou, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - End Raid Bonus<br />(11/20/19 22:22:37) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Marabou, Baggo, Goshnak, Blahblah, Orvar, Selma, Railtracer, Jobbjobb, Pendji, Timanttila, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Fireguy, Gorach, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Onyxia's Lair: Onyxia<br />(11/20/19 22:11:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Selma, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Golemagg the Incinerator<br />(11/20/19 21:48:21) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Selma, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Sulfuron Harbinger<br />(11/20/19 21:36:58) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Medhelp, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Selma, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Shazzrah<br />(11/20/19 21:06:11) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Medhelp, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Selma, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Baron Geddon<br />(11/20/19 20:52:22) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Medhelp, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Selma, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Garr<br />(11/20/19 20:38:27) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Medhelp, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Selma, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Gehennas<br />(11/20/19 20:21:01) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Blahblah, Orvar, Medhelp, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Paso, Smaitama, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Selma, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(11/20/19 20:00:44) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Baggo, Goshnak, Stekn, Orvar, Medhelp, Railtracer, Timanttila, Pendji, Zteffo, Petramage, Rebanc, Smaitama, Paso, Frostweaver, Oroligmage, Twizz, Gorach, Fireguy, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(11/20/19 19:51:37) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Dishonest, Kanaki, Mammaspojke, Muppsen, Altangolv, Lillsiv, Jobbjobb, Selma, Goshnak, Fireguy, Orvar, Medhelp, Rebanc, Smaitama, Twizz, Frostweaver, Oroligmage, Pendji, Timanttila, Gorach, Stekn, Paso, Railtracer, Zteffo, Petramage, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(11/20/19 19:30:14) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Dishonest, Fireguy, Frostweaver, Goagubbe, Gorach, Goshnak, Hundmat, Ingelit, Jobbjobb, Kanaki, Katherine, Kozalkort, Lillsiv, Lurifax, Lykk, Mammaspojke, Manticorah, Medhelp, Muppsen, Oroligmage, Orvar, Padroni, Paso, Pendji, Petramage, Railtracer, Rebanc, Rippan, Röjarralf, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Twizz, Zaggiezug, Zteffo, </div>
+          <div class="divClass" style="width: 4%;">-5%</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Weekly Decay<br />(11/19/19 18:38:00) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Paso, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 19/11<br />(11/19/19 17:45:48) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rippan, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 18/11<br />(11/18/19 18:49:11) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Oroligmage, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(11/17/19 19:47:40) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Ageis, Shaparaq, Dishonest, Kanaki, Muppsen, Altangolv, Baggo, Mammaspojke, Blahblah, Jobbjobb, Railtracer, Zaggiezug, Fireguy, Timanttila, Twizz, Rebanc, Pendji, Lykk, Stekn, Medhelp, Frostweaver, Smaitama, Gorach, Paso, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(11/17/19 19:43:09) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Ageis, Shaparaq, Dishonest, Kanaki, Muppsen, Altangolv, Baggo, Mammaspojke, Blahblah, Jobbjobb, Railtracer, Oroligmage, Zaggiezug, Fireguy, Timanttila, Twizz, Rebanc, Pendji, Lykk, Stekn, Medhelp, Frostweaver, Smaitama, Gorach, Paso, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Onyxia's Lair: Onyxia<br />(11/17/19 19:38:45) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Ageis, Shaparaq, Mammaspojke, Kanaki, Muppsen, Altangolv, Baggo, Dishonest, Blahblah, Jobbjobb, Railtracer, Oroligmage, Zaggiezug, Fireguy, Timanttila, Twizz, Rebanc, Pendji, Lykk, Stekn, Medhelp, Frostweaver, Smaitama, Gorach, Paso, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(11/17/19 19:30:25) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 17/11<br />(11/17/19 17:07:53) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Kanaki, Shaparaq, Ancile, Hundmat, Muppsen, Altangolv, Railtracer, Mammaspojke, Timanttila, Manticorah, Baggo, Frostweaver, Dishonest, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 15/11<br />(11/15/19 19:50:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Jobbjobb, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank 13/11<br />(11/14/19 08:58:06) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank 13/11<br />(11/14/19 08:47:45) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Dishonest, Fireguy, Frostweaver, Goagubbe, Gorach, Goshnak, Hundmat, Ingelit, Jobbjobb, Kanaki, Katherine, Kozalkort, Lillsiv, Lurifax, Lykk, Mammaspojke, Manticorah, Medhelp, Muppsen, Oroligmage, Orvar, Padroni, Paso, Pendji, Petramage, Railtracer, Rebanc, Rippan, Röjarralf, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Twizz, Zaggiezug, Zteffo, </div>
+          <div class="divClass" style="width: 4%;">-5%</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Weekly Decay<br />(11/13/19 23:16:48) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Ancile, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, Manticorah, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(11/13/19 22:16:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Ancile, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, Manticorah, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Ragnaros<br />(11/13/19 22:12:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Ancile, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, Manticorah, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/13/19 21:55:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Ancile, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, Manticorah, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Sulfuron Harbinger<br />(11/13/19 21:45:41) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Golemagg the Incinerator<br />(11/13/19 21:30:20) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Shazzrah<br />(11/13/19 21:02:35) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Baron Geddon<br />(11/13/19 20:44:50) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Slitz, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Garr<br />(11/13/19 20:29:14) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Slitz, Frostweaver, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Gehennas<br />(11/13/19 20:09:24) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(11/13/19 19:54:33) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Zteffo, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Frostweaver, Mammaspojke, Jobbjobb, Baggo, Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(11/13/19 19:47:03) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Manticorah, Shaparaq, Cronor, Timanttila, Railtracer, Oroligmage, Stekn, Lillsiv, Lykk, Orvar, Rebanc, Pendji, Petramage, Muppsen, Altangolv, Dishonest, Kanaki, Ripsaw, Hundmat, Mammaspojke, Medhelp, Gorach, Fireguy, Twizz, Paso, Zaggiezug, Selma, Frostweaver, Zteffo, Jobbjobb, Baggo, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(11/13/19 19:30:29) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Hundmat, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 6-12/11<br />(11/12/19 14:56:11) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Shaparaq, Jobbjobb, Dishonest, Slitz, Kanaki, Trollet, Ingelit, Muppsen, Mammaspojke, Altangolv, Baggo, Blahblah, Medhelp, Railtracer, Pendji, Frostweaver, Stekn, Röjarralf, Oroligmage, Orvar, Rebanc, Zaggiezug, Twizz, Smaitama, Gorach, Paso, Selma, Timanttila, Zteffo, Fireguy, Lykk, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(11/10/19 22:19:55) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Shaparaq, Ageis, Dishonest, Baggo, Kanaki, Trollet, Ingelit, Muppsen, Mammaspojke, Altangolv, Jobbjobb, Blahblah, Medhelp, Railtracer, Pendji, Frostweaver, Stekn, Röjarralf, Oroligmage, Orvar, Rebanc, Zaggiezug, Twizz, Smaitama, Gorach, Paso, Selma, Timanttila, Zteffo, Fireguy, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/10/19 20:50:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Shaparaq, Ageis, Dishonest, Baggo, Kanaki, Trollet, Ingelit, Muppsen, Mammaspojke, Altangolv, Selma, Blahblah, Medhelp, Railtracer, Pendji, Frostweaver, Stekn, Röjarralf, Oroligmage, Orvar, Rebanc, Zaggiezug, Twizz, Smaitama, Gorach, Paso, Timanttila, Fireguy, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Onyxia's Lair: Onyxia<br />(11/10/19 19:45:21) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Cronor, Shaparaq, Dishonest, Baggo, Kanaki, Trollet, Ingelit, Muppsen, Mammaspojke, Altangolv, Selma, Blahblah, Medhelp, Smaitama, Röjarralf, Rebanc, Orvar, Zaggiezug, Railtracer, Gorach, Stekn, Paso, Frostweaver, Timanttila, Oroligmage, Fireguy, Twizz, Pendji, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(11/10/19 19:30:19) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rippan, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 6-12/11<br />(11/10/19 12:20:13) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Gorach, </div>
+          <div class="divClass" style="width: 4%;">50</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(11/09/19 19:43:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Railtracer, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 6-12/11<br />(11/08/19 17:12:29) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank <br />(11/07/19 18:44:19) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Mammaspojke, Baggo, Timanttila, Oroligmage, Altangolv, Ingelit, Muppsen, Fireguy, Selma, Shaparaq, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank 6-12/11<br />(11/07/19 18:05:59) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/07/19 06:04:18) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Selma, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Muppsen, Smaitama, Stekn, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Oroligmage, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Sulfuron Harbinger<br />(11/06/19 22:30:05) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Selma, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Muppsen, Smaitama, Stekn, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Oroligmage, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(11/06/19 22:26:37) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Selma, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Muppsen, Smaitama, Stekn, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Oroligmage, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Golemagg the Incinerator<br />(11/06/19 22:16:57) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Selma, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Muppsen, Smaitama, Stekn, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Oroligmage, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Shazzrah<br />(11/06/19 21:54:07) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Selma, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Stekn, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Oroligmage, Timanttila, Muppsen, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Baron Geddon<br />(11/06/19 21:31:38) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Selma, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Stekn, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Zaggiezug, Oroligmage, Timanttila, Muppsen, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Garr<br />(11/06/19 21:15:08) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Ingelit, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Kozalkort, Frostweaver, Railtracer, Twizz, Pendji, Paso, Hundmat, Zaggiezug, Oroligmage, Selma, Timanttila, Muppsen, Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Gehennas<br />(11/06/19 20:51:50) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Ingelit, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Kozalkort, Frostweaver, Railtracer, Twizz, Pendji, Paso, Padroni, Zaggiezug, Oroligmage, Selma, Timanttila, Muppsen, Stekn, Hundmat, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(11/06/19 20:34:59) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Slitz, Ingelit, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Kozalkort, Frostweaver, Railtracer, Twizz, Pendji, Paso, Padroni, Zaggiezug, Oroligmage, Selma, Timanttila, Muppsen, Stekn, Hundmat, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(11/06/19 20:25:50) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Blahblah, </div>
+          <div class="divClass" style="width: 4%;">-5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(11/06/19 19:59:05) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Selma, Ingelit, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Kozalkort, Frostweaver, Railtracer, Twizz, Pendji, Paso, Padroni, Zaggiezug, Oroligmage, Stekn, Timanttila, Slitz, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Onyxia's Lair: Onyxia<br />(11/06/19 19:44:58) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Blahblah, </div>
+          <div class="divClass" style="width: 4%;">-10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(11/06/19 19:43:48) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Rippan, Ageis, Cronor, Shaparaq, Manticorah, Selma, Ingelit, Mammaspojke, Blahblah, Kanaki, Trollet, Altangolv, Dishonest, Baggo, Rebanc, Medhelp, Lykk, Fireguy, Petramage, Orvar, Smaitama, Kozalkort, Frostweaver, Railtracer, Zaggiezug, Stekn, Paso, Padroni, Twizz, Oroligmage, Pendji, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(11/06/19 19:30:23) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank - 30-5/11<br />(11/06/19 19:20:24) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank - 30-5/11<br />(11/06/19 19:19:33) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Manticorah, Kanaki, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/06/19 19:19:07) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Dishonest, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bankx<br />(11/06/19 18:04:36) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Paso, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bankx<br />(11/06/19 18:02:50) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ancile, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bankx<br />(11/06/19 17:59:13) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Jobbjobb, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/06/19 17:59:04) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Frostweaver, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/06/19 17:58:51) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Paso, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/06/19 17:58:37) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Dishonest, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/06/19 17:58:18) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Altangolv, </div>
+          <div class="divClass" style="width: 4%;">-5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(11/05/19 20:03:07) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rippan, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/04/19 10:23:25) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Hundmat, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/04/19 10:21:36) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Mammaspojke, </div>
+          <div class="divClass" style="width: 4%;">-5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/03/19 22:35:49) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ingelit, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/03/19 22:35:39) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Hundmat, Rebanc, Trollet, Selma, Pendji, Fireguy, Frostweaver, Timanttila, Twizz, Oroligmage, Petramage, Kozalkort, Orvar, Medhelp, Katherine, Lykk, Baggo, Dishonest, Blahblah, Kanaki, Mammaspojke, Rippan, Altangolv, Stekn, Railtracer, Shaparaq, Padroni, Paso, Zaggiezug, Ansikte, Ancile, Cronor, Slitz, Ageis, Zteffo, Smaitama, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(11/03/19 22:35:21) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Hundmat, Rebanc, Trollet, Selma, Pendji, Fireguy, Frostweaver, Timanttila, Twizz, Oroligmage, Petramage, Kozalkort, Orvar, Medhelp, Katherine, Lykk, Baggo, Dishonest, Blahblah, Kanaki, Mammaspojke, Rippan, Altangolv, Stekn, Railtracer, Shaparaq, Padroni, Paso, Zaggiezug, Ansikte, Ancile, Cronor, Slitz, Ageis, Zteffo, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Ragnaros<br />(11/03/19 22:34:54) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Hundmat, Rebanc, Trollet, Selma, Pendji, Fireguy, Frostweaver, Timanttila, Twizz, Oroligmage, Petramage, Kozalkort, Orvar, Medhelp, Katherine, Lykk, Baggo, Dishonest, Blahblah, Kanaki, Mammaspojke, Rippan, Altangolv, Stekn, Railtracer, Shaparaq, Padroni, Paso, Zaggiezug, Ansikte, Ancile, Cronor, Slitz, Ageis, Smaitama, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/03/19 22:34:25) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Smaitama, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Ragnaros<br />(11/03/19 22:26:30) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Mammaspojke, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/03/19 22:22:54) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Ageis, Cronor, Rippan, Shaparaq, Ansikte, Baggo, Kanaki, Blahblah, Mammaspojke, Selma, Altangolv, Slitz, Dishonest, Orvar, Petramage, Railtracer, Paso, Stekn, Lykk, Pendji, Twizz, Rebanc, Medhelp, Smaitama, Timanttila, Oroligmage, Kozalkort, Frostweaver, Padroni, Fireguy, Zaggiezug, Hundmat, Zteffo, Trollet, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Ragnaros<br />(11/03/19 22:11:02) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Ageis, Cronor, Rippan, Shaparaq, Ansikte, Baggo, Kanaki, Blahblah, Ingelit, Mammaspojke, Selma, Altangolv, Slitz, Dishonest, Orvar, Zaggiezug, Railtracer, Paso, Stekn, Lykk, Pendji, Twizz, Rebanc, Medhelp, Smaitama, Timanttila, Oroligmage, Kozalkort, Frostweaver, Petramage, Fireguy, Padroni, Hundmat, Trollet, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Majordomo Executus<br />(11/03/19 20:39:27) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Ageis, Cronor, Rippan, Shaparaq, Ansikte, Baggo, Kanaki, Blahblah, Ingelit, Mammaspojke, Selma, Altangolv, Slitz, Dishonest, Orvar, Zaggiezug, Railtracer, Paso, Stekn, Lykk, Pendji, Twizz, Rebanc, Medhelp, Smaitama, Timanttila, Oroligmage, Kozalkort, Frostweaver, Petramage, Fireguy, Padroni, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Onyxia's Lair: Onyxia<br />(11/03/19 19:47:30) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Ageis, Cronor, Rippan, Shaparaq, Ansikte, Baggo, Kanaki, Blahblah, Ingelit, Mammaspojke, Selma, Altangolv, Slitz, Dishonest, Orvar, Zaggiezug, Railtracer, Paso, Stekn, Lykk, Pendji, Twizz, Rebanc, Medhelp, Smaitama, Timanttila, Oroligmage, Kozalkort, Frostweaver, Petramage, Fireguy, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(11/03/19 19:30:10) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Mammaspojke, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - bank<br />(11/03/19 19:27:24) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Manticorah, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:14:27) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Fireguy, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:03:33) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Frostweaver, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:03:23) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:03:14) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Shaparaq, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:03:01) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Baggo, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:02:40) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Kozalkort, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:02:21) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(11/03/19 19:01:55) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Manticorah, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/31/19 17:21:01) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Zteffo, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/31/19 17:20:07) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Timanttila, Railtracer, Oroligmage, Stekn, Katherine, Altangolv, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/31/19 17:16:22) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Kanaki, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/31/19 17:15:16) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ingelit, Ageis, Ancile, Shaparaq, Cronor, Trollet, Rippan, Slitz, Paso, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Baggo, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, Fireguy, Lillsiv, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(10/30/19 22:30:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ingelit, Ageis, Ancile, Shaparaq, Cronor, Trollet, Rippan, Slitz, Paso, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Baggo, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, Fireguy, Lillsiv, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Golemagg the Incinerator<br />(10/30/19 22:29:41) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ingelit, Ageis, Ancile, Shaparaq, Cronor, Trollet, Rippan, Slitz, Paso, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Baggo, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, Fireguy, Lillsiv, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Sulfuron Harbinger<br />(10/30/19 22:19:08) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Paso, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Shazzrah<br />(10/30/19 21:08:46) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Paso, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Baron Geddon<br />(10/30/19 20:51:11) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Paso, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Garr<br />(10/30/19 20:35:58) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Paso, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Gehennas<br />(10/30/19 20:16:53) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Paso, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(10/30/19 20:01:00) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Twizz, Paso, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Pendji, Oroligmage, Blahblah, Kozalkort, Lykk, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/30/19 19:52:22) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ageis, Lillsiv, Shaparaq, Cronor, Trollet, Ingelit, Slitz, Baggo, Smaitama, Frostweaver, Zaggiezug, Petramage, Padroni, Railtracer, Altangolv, Pendji, Twizz, Oroligmage, Dishonest, Kanaki, Mammaspojke, Ansikte, Orvar, Stekn, Timanttila, Selma, Medhelp, Paso, Blahblah, Lykk, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(10/30/19 19:30:28) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Baggo, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/28/19 16:04:57) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Baggo, Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">-15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Felaktig OT-bonus<br />(10/28/19 15:57:34) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rebanc, Lillsiv, Trollet, Selma, Kozalkort, Twizz, Timanttila, Frostweaver, Pendji, Oroligmage, Smaitama, Katherine, Medhelp, Orvar, Mammaspojke, Dishonest, Kanaki, Baggo, Blahblah, Rippan, Ingelit, Altangolv, Shaparaq, Stekn, Railtracer, Zaggiezug, Paso, Goagubbe, Denkamedkniv, Goshnak, Ancile, Slitz, Ansikte, Cronor, </div>
+          <div class="divClass" style="width: 4%;">-5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Fel slutbonus<br />(10/28/19 15:56:42) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Frostweaver, Goagubbe, Goshnak, Ingelit, Kanaki, Katherine, Kozalkort, Lillsiv, Mammaspojke, Medhelp, Oroligmage, Orvar, Paso, Pendji, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(10/27/19 22:27:22) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Frostweaver, Goshnak, Ingelit, Kanaki, Katherine, Kozalkort, Lillsiv, Mammaspojke, Medhelp, Oroligmage, Paso, Pendji, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Onyxia's Lair: Onyxia<br />(10/27/19 20:55:52) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ancile, Shaparaq, Ageis, Cronor, Rippan, Ingelit, Trollet, Slitz, Mammaspojke, Dishonest, Kanaki, Altangolv, Blahblah, Ansikte, Lillsiv, Baggo, Selma, Goshnak, Smaitama, Rebanc, Medhelp, Frostweaver, Kozalkort, Pendji, Timanttila, Oroligmage, Railtracer, Stekn, Paso, Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(10/27/19 19:30:06) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Goshnak, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/27/19 13:50:45) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rippan, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/25/19 19:41:46) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/25/19 19:41:01) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Railtracer, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/25/19 19:40:48) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Stekn, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/25/19 19:40:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Oroligmage, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/25/19 19:40:08) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Selma, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/25/19 19:39:52) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Goagubbe, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/23/19 22:28:13) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Timanttila, Ingelit, Mammaspojke, Kozalkort, Altangolv, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/23/19 22:26:37) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Frostweaver, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/23/19 22:25:54) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Dishonest, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/23/19 22:25:45) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ancile, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/23/19 22:24:28) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Oroligmage, </div>
+          <div class="divClass" style="width: 4%;">110</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(10/23/19 22:06:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ageis, Ancile, Rippan, Shaparaq, Cronor, Goshnak, Ansikte, Dishonest, Kanaki, Blahblah, Mammaspojke, Slitz, Baggo, Altangolv, Trollet, Selma, Frostweaver, Zaggiezug, Paso, Lurifax, Padroni, Rebanc, Medhelp, Denkamedkniv, Railtracer, Smaitama, Stekn, Twizz, Petramage, Kozalkort, Oroligmage, Timanttila, Fireguy, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(10/23/19 21:56:16) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Fireguy, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Golemagg the Incinerator<br />(10/23/19 21:56:10) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Fireguy, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Sulfuron Harbinger<br />(10/23/19 21:44:10) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Fireguy, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Shazzrah<br />(10/23/19 21:22:34) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Fireguy, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Baron Geddon<br />(10/23/19 20:59:47) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Fireguy, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Garr<br />(10/23/19 20:49:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Fireguy, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Gehennas<br />(10/23/19 20:23:33) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(10/23/19 20:06:29) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Baggo, Blahblah, Cronor, Denkamedkniv, Dishonest, Frostweaver, Goshnak, Kanaki, Katherine, Kozalkort, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Railtracer, Rebanc, Rippan, Selma, Shaparaq, Slitz, Smaitama, Stekn, Timanttila, Trollet, Twizz, Zaggiezug, Oroligmage, Medhelp, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/23/19 19:58:38) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Medhelp, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - On time bonus<br />(10/23/19 19:33:15) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Ageis, Ancile, Rippan, Shaparaq, Cronor, Goshnak, Ansikte, Dishonest, Kanaki, Blahblah, Mammaspojke, Slitz, Baggo, Trollet, Selma, Frostweaver, Zaggiezug, Lurifax, Smaitama, Rebanc, Paso, Denkamedkniv, Railtracer, Padroni, Stekn, Twizz, Petramage, Kozalkort, Oroligmage, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(10/23/19 19:30:42) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/22/19 16:09:44) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Kanaki, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/22/19 16:09:33) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Shaparaq, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/22/19 16:05:16) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Shaparaq, </div>
+          <div class="divClass" style="width: 4%;">0</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Other - Bank<br />(10/22/19 16:05:12) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Zaggiezug, </div>
+          <div class="divClass" style="width: 4%;">110</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(10/21/19 15:49:47) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Blahblah, </div>
+          <div class="divClass" style="width: 4%;">110</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(10/21/19 15:46:22) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Baggo, </div>
+          <div class="divClass" style="width: 4%;">110</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(10/21/19 15:46:18) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Denkamedkniv, </div>
+          <div class="divClass" style="width: 4%;">80</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(10/21/19 15:45:59) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rebanc, </div>
+          <div class="divClass" style="width: 4%;">40</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">DKP Adjust<br />(10/21/19 15:42:18) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ancile, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:41:23) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ancile, </div>
+          <div class="divClass" style="width: 4%;">45</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:41:20) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Paso, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:41:15) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Shaparaq, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:41:12) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Railtracer, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:41:09) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Railtracer, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:41:05) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, </div>
+          <div class="divClass" style="width: 4%;">50</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:40:05) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Goshnak, </div>
+          <div class="divClass" style="width: 4%;">-10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:58) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Goshnak, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:53) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ansikte, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:51) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Cronor, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:48) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Padroni, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ingelit, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:39) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Rippan, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:36) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Altangolv, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:32) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Dishonest, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:27) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Dishonest, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:10) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Kanaki, </div>
+          <div class="divClass" style="width: 4%;">50</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:39:03) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Mammaspojke, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:38:56) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Smaitama, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:38:53) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Lurifax, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:38:48) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, </div>
+          <div class="divClass" style="width: 4%;">50</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:38:11) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Kozalkort, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:38:02) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Twizz, </div>
+          <div class="divClass" style="width: 4%;">-10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:56) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Twizz, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:50) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Petramage, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:46) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Frostweaver, </div>
+          <div class="divClass" style="width: 4%;">65</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:40) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Fireguy, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:36) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Lillsiv, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:32) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Timanttila, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:31) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Pendji, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:28) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Pendji, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:21) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Timanttila, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:06) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Lillsiv, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:03) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Selma, </div>
+          <div class="divClass" style="width: 4%;">55</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Correcting Error<br />(10/20/19 22:37:00) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Katherine, Rippan, Ancile, Goshnak, Twizz, Fireguy, Kanaki, Ingelit, Selma, Kozalkort, </div>
+          <div class="divClass" style="width: 4%;">10</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Raid Completion Bonus<br />(10/20/19 22:36:15) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Cronor, Dishonest, Fireguy, Frostweaver, Goshnak, Ingelit, Katherine, Kanaki, Kozalkort, Lillsiv, Lurifax, Mammaspojke, Padroni, Paso, Railtracer, Pendji, Petramage, Rippan, Selma, Shaparaq, Smaitama, Twizz, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Shazzrah<br />(10/20/19 21:54:51) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Cronor, Dishonest, Fireguy, Frostweaver, Goshnak, Ingelit, Kanaki, Katherine, Kozalkort, Lillsiv, Lurifax, Mammaspojke, Padroni, Paso, Pendji, Petramage, Rippan, Railtracer, Selma, Shaparaq, Smaitama, Twizz, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Baron Geddon<br />(10/20/19 21:35:38) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Cronor, Dishonest, Fireguy, Frostweaver, Goshnak, Ingelit, Kanaki, Katherine, Kozalkort, Lillsiv, Lurifax, Mammaspojke, Padroni, Paso, Pendji, Petramage, Railtracer, Rippan, Shaparaq, Selma, Twizz, Timanttila, Smaitama, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Garr<br />(10/20/19 20:49:54) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, Altangolv, Ancile, Ansikte, Dishonest, Cronor, Fireguy, Frostweaver, Goshnak, Kanaki, Ingelit, Katherine, Kozalkort, Lillsiv, Lurifax, Mammaspojke, Padroni, Paso, Petramage, Pendji, Railtracer, Rippan, Selma, Shaparaq, Smaitama, Twizz, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Gehennas<br />(10/20/19 20:29:38) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Altangolv, Ancile, Ansikte, Cronor, Dishonest, Fireguy, Frostweaver, Goshnak, Ingelit, Kanaki, Katherine, Kozalkort, Lillsiv, Lurifax, Mammaspojke, Padroni, Paso, Pendji, Petramage, Railtracer, Rippan, Selma, Shaparaq, Smaitama, Twizz, Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(10/20/19 20:22:06) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Magmadar<br />(10/20/19 20:21:51) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Timanttila, </div>
+          <div class="divClass" style="width: 4%;">15</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">On Time Bonus<br />(10/20/19 20:06:43) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Timanttila, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:06:33) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ageis, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:01:06) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Cronor, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:01:03) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ancile, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:01:01) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Ansikte, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:00:59) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Goshnak, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:00:57) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Railtracer, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:00:55) </div>
+       </div>
+       <div class="divTableRow">
+          <div class="divPlayer" style="font-size: 0.7em; width: 71%;">Padroni, </div>
+          <div class="divClass" style="width: 4%;">5</div>
+          <div class="divDKP" style="width: 25%; font-size: 0.7em;">Molten Core: Lucifron<br />(10/20/19 20:00:52) </div>
+       </div>
+    </div>
+ </div>
+ </div>
+ <div id="LootHistory" class="tab" style="display:none;"><div class="divTable" style="width: 50%;border: 1px solid #000;">
     <div class="divTableBody">
        <div class="divTableRow">
           <div class="divPlayerHeader">Loot</div>
