@@ -1,0 +1,282 @@
+<html>
+<script>
+function openTab(tabName) {
+   var i;
+   var x = document.getElementsByClassName("tab");
+   for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+   }
+   document.getElementById(tabName).style.display = "block";
+}
+</script>
+<script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script><script src="https://wow.zamimg.com/widgets/power.js"></script>
+<style>
+html { background-color: #000; };
+.divTable{ display: table; float: left; margin: 10px 10px; }
+.divTableRow { display: table-row; background-color: #000}
+.divTableRow:hover { background-color: #222; }
+.divTableHeading { background-color: #EEE; display: table-header-group; }
+.divTableCell, .divTableHead { border: 1px solid #999999; display: table-cell; padding: 3px 10px; }
+.divPlayer { border: 1px solid #999999; display: table-cell; width: 700px; padding: 3px 10px; text-align: left; vertical-align: middle; word-wrap: normal; color: #ffffff; }
+.divClass { border: 1px solid #999999; display: table-cell; padding: 3px 10px; text-align: center; vertical-align: middle; color: #ffffff; }
+.divDKP { border: 1px solid #999999; display: table-cell; width: 200px%; padding: 3px 10px; text-align: center; vertical-align: middle; color: #ffffff; }
+.divPlayerHeader { border: 1px solid #999999; display: table-cell; font-weight: bold; width: 50%; padding: 3px 10px; text-align: left; background-color: #bbb; }
+.divClassHeader { border: 1px solid #999999; display: table-cell; font-weight: bold; width: 150px; padding: 3px 10px; text-align: center; background-color: #bbb; }
+.divDKPHeader { border: 1px solid #999999; display: table-cell; font-weight: bold; width: 30%; padding: 3px 10px; text-align: center; background-color: #bbb; }
+.divTableHeading { background-color: #EEE; display: table-header-group; font-weight: bold; }
+.divTableFoot { background-color: #EEE; display: table-footer-group; font-weight: bold; }
+.divTableBody { display: table-row-group; }
+</style>
+
+<br /><br />
+<div>
+   <button onclick="openTab('DKP')">DKP Table</button>
+   <button onclick="openTab('DKPHistory')">DKP History</button>
+   <button onclick="openTab('LootHistory')">Loot History</button>
+</div>
+<br /><br />
+<div id="DKP" class="tab"><div class="divTable" style="width: 30%;border: 1px solid #000;">
+   <div class="divTableBody">
+      <div class="divTableRow">
+         <div class="divPlayerHeader">Player</div>
+         <div class="divClassHeader">Class</div>
+         <div class="divDKPHeader">DKP</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ageis</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">151</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Altangolv</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" height="24" width="24" /></div>
+         <div class="divDKP">281</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ancile</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">194</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ansikte</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">294</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Baggo</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">554</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Blahblah</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">250</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Cronor</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">397</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Dishonest</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">323</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Fireguy</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">281</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Frostweaver</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">58</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Goagubbe</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">13</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Gorach</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">29</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Goshnak</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">264</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Hundmat</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" height="24" width="24" /></div>
+         <div class="divDKP">131</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Ingelit</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" height="24" width="24" /></div>
+         <div class="divDKP">271</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Jobbjobb</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">31</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Kanaki</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">309</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Katherine</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">156</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Kozalkort</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">320</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Lillsiv</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_hunter.jpg" height="24" width="24" /></div>
+         <div class="divDKP">205</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Lurifax</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">158</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Lykk</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">56</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Mammaspojke</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_rogue.jpg" height="24" width="24" /></div>
+         <div class="divDKP">392</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Manticorah</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">126</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Marabou</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" height="24" width="24" /></div>
+         <div class="divDKP">15</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Medhelp</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">245</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Muppsen</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">77</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Oroligmage</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">500</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Orvar</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">240</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Padroni</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">276</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Paso</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">573</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Pendji</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">410</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Petramage</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">255</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Railtracer</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">578</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Rebanc</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_druid.jpg" height="24" width="24" /></div>
+         <div class="divDKP">182</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Rippan</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_shaman.jpg" height="24" width="24" /></div>
+         <div class="divDKP">310</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Röjarralf</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">31</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Selma</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_hunter.jpg" height="24" width="24" /></div>
+         <div class="divDKP">449</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Shaparaq</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">578</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Slitz</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">298</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Smaitama</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_priest.jpg" height="24" width="24" /></div>
+         <div class="divDKP">392</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Stekn</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">360</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Timanttila</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">519</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Twizz</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_mage.jpg" height="24" width="24" /></div>
+         <div class="divDKP">458</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Zaggiezug</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">155</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Zinfandel</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warrior.jpg" height="24" width="24" /></div>
+         <div class="divDKP">5</div>
+      </div>
+      <div class="divTableRow">
+         <div class="divPlayer">Zteffo</div>
+         <div class="divClass" style="width: 150px;"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" height="24" width="24" /></div>
+         <div class="divDKP">93</div>
+      </div>
+   </div>
+</div>
+</div>
